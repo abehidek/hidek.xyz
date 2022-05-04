@@ -1,0 +1,14 @@
+{
+  "name": "me",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "scripts": {
+    "dev-node-sass": "sass --watch css/main.scss css/main.css",
+    "dev-ruby-sass": "sass --watch css/main.scss:css/main.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.51.0"
+  }
+}
