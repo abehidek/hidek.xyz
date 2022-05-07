@@ -5,7 +5,12 @@ let
     (fetchTarball "https://nixos.org/channels/nixos-unstable/nixexprs.tar.xz")
     { };
 in pkgs.mkShell {
-  buildInputs =
-    [ pkgs.sass unstable.nodejs unstable.nodePackages.live-server pkgs.sl ];
+  buildInputs = [
+    pkgs.sass
+    unstable.nodejs
+    unstable.nodePackages.live-server
+    unstable.nodePackages.typescript
+    pkgs.sl
+  ];
   shellHook = "";
 }
