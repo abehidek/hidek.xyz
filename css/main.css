@@ -1,24 +1,31 @@
-body {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html, body {
   width: 100vw;
   height: 100vh;
   margin: 0;
   background: red; }
-  body .container {
+  html .container, body .container {
+    margin: 0;
     width: 100%;
     height: 100%;
+    width: 100%;
     background: green;
     scroll-snap-type: y mandatory;
     overflow-y: scroll; }
-    body .container section {
+    html .container section, body .container section {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
+      height: 100%;
       scroll-snap-align: start; }
-      body .container section:nth-of-type(1) {
+      html .container section:nth-of-type(1), body .container section:nth-of-type(1) {
         background: purple; }
-      body .container section:nth-of-type(2) {
+      html .container section:nth-of-type(2), body .container section:nth-of-type(2) {
         background: blue; }
 
 /*# sourceMappingURL=main.css.map */
