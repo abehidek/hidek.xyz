@@ -1,55 +1,54 @@
 @media only screen and (max-width: 800px) {
   html, body {
-    .container {
-      scroll-snap-type: none;
-      overflow-y: visible;
+    width: 100%;
+  }
 
-      section {
-        scroll-snap-align: none;
+  .container {
+    width: 100%;
+  }
+  section {
+    display: block;
+
+    .menu {
+      display: block;
+      width: 100%;
+      height: 20vh;
+
+      a, p, h1 {
+        font-size: 1rem;
+      }
+    }
+    .tabs {
+      display: block;
+      width: 100%;
+      height: 80vh;
+      scroll-snap-type: y mandatory;
+      overflow-x: visible;
+      overflow-y: scroll;
+
+      .tab {
+        scroll-snap-align: start;
+        padding: 1rem;
         height: auto;
-        flex-direction: column;
-        .tabs {
-          justify-content: start;
-          align-items: start;
-          scroll-snap-type: x mandatory;
-          overflow-x: scroll;
-          overflow-y: visible; 
-          display: flex;
-          height: 90vh;
-          // min-height: 80%;
+        min-height: 100%;
+        overflow-y: hidden;
 
-          .tab {
-            flex: none;
-            width: 100vw;
-            height: 100%;
-            display: block;
-            scroll-snap-align: start;
-            padding: 1rem 1.5rem;
-
-            .title {
-              display: block;
-              text-align: center;
-              font-size: 1.5rem;
-              margin-bottom: 1rem;
-            }
-          }
-        }
-        .menu {
-          display: none;
-        }
-        .mobile-title {
+        .title {
           display: block;
-          width: 100%;
-          height: 10vh;
           text-align: center;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
-          h1 {
-            font-size: 2rem;
-          }
+          font-size: 1.5rem;
         }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 350px) {
+  section {
+    .tabs {
+      .tab {
+        scroll-snap-align: none;
       }
     }
   }

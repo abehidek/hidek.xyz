@@ -1,108 +1,102 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
 html, body {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   margin: 0; }
-  html p, body p {
-    font-size: 1.25rem; }
-  html .container, body .container {
-    margin: 0;
-    width: 100%;
+
+p {
+  font-size: 1.25rem; }
+
+.container {
+  margin: 0;
+  width: 100%;
+  height: 100%; }
+
+section {
+  width: 100%;
+  height: 100%;
+  display: flex; }
+  section .tabs {
     height: 100%;
-    width: 100%;
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll; }
-    html .container section, body .container section {
-      display: flex;
-      width: 100%;
-      height: 100%;
+    width: 70vw;
+    display: flex;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll; }
+    section .tabs .tab {
       scroll-snap-align: start;
-      display: flex; }
-      html .container section .tabs, body .container section .tabs {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        scroll-snap-type: x mandatory;
-        overflow-x: scroll; }
-        html .container section .tabs .tab, body .container section .tabs .tab {
-          scroll-snap-align: start;
-          flex: none;
-          padding: 2rem 2.5rem;
-          width: 100%;
-          height: 100%; }
-          html .container section .tabs .tab .title, body .container section .tabs .tab .title {
-            display: none;
-            font-weight: bolder; }
-          html .container section .tabs .tab:nth-of-type(1), body .container section .tabs .tab:nth-of-type(1) {
-            background: red; }
-          html .container section .tabs .tab:nth-of-type(2), body .container section .tabs .tab:nth-of-type(2) {
-            background: green; }
-          html .container section .tabs .tab:nth-of-type(3), body .container section .tabs .tab:nth-of-type(3) {
-            background: grey; }
-      html .container section .menu, body .container section .menu {
-        height: 100vh;
-        width: 50%;
-        gap: 1rem;
-        padding: 0rem 0.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        overflow: auto; }
-        html .container section .menu a, html .container section .menu p, html .container section .menu h1, body .container section .menu a, body .container section .menu p, body .container section .menu h1 {
-          font-size: 3rem;
-          cursor: pointer; }
-          html .container section .menu a:hover, html .container section .menu p:hover, html .container section .menu h1:hover, body .container section .menu a:hover, body .container section .menu p:hover, body .container section .menu h1:hover {
-            color: blue; }
-        html .container section .menu h1, body .container section .menu h1 {
-          font-size: 3.5rem; }
-      html .container section .mobile-title, body .container section .mobile-title {
-        display: none; }
+      flex: none;
+      padding: 2rem 2.5rem;
+      width: 100%;
+      height: 100%; }
+      section .tabs .tab .title {
+        display: none;
+        font-weight: bolder; }
+      section .tabs .tab:nth-of-type(1) {
+        background: red; }
+      section .tabs .tab:nth-of-type(2) {
+        background: green; }
+      section .tabs .tab:nth-of-type(3) {
+        background: grey; }
+  section .menu {
+    height: 100vh;
+    width: 30vw;
+    gap: 1rem;
+    padding: 0rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: auto; }
+    section .menu a, section .menu p, section .menu h1 {
+      font-size: 3rem;
+      cursor: pointer; }
+      section .menu a:hover, section .menu p:hover, section .menu h1:hover {
+        color: blue; }
+    section .menu h1 {
+      font-size: 3.5rem; }
 
 @media only screen and (max-height: 600px) {
-  html .container section:nth-of-type(1) .menu a, html .container section:nth-of-type(1) .menu h1, html .container section:nth-of-type(1) .menu p, body .container section:nth-of-type(1) .menu a, body .container section:nth-of-type(1) .menu h1, body .container section:nth-of-type(1) .menu p {
+  section .menu a, section .menu h1, section .menu p {
     font-size: 2rem; } }
+@media only screen and (max-height: 350px) {
+  section .menu a, section .menu h1, section .menu p {
+    font-size: 1.25rem; } }
 @media only screen and (max-width: 800px) {
-  html .container, body .container {
-    scroll-snap-type: none;
-    overflow-y: visible; }
-    html .container section, body .container section {
-      scroll-snap-align: none;
-      height: auto;
-      flex-direction: column; }
-      html .container section .tabs, body .container section .tabs {
-        justify-content: start;
-        align-items: start;
-        scroll-snap-type: x mandatory;
-        overflow-x: scroll;
-        overflow-y: visible;
-        display: flex;
-        height: 90vh; }
-        html .container section .tabs .tab, body .container section .tabs .tab {
-          flex: none;
-          width: 100vw;
-          height: 100%;
+  html, body {
+    width: 100%; }
+
+  .container {
+    width: 100%; }
+
+  section {
+    display: block; }
+    section .menu {
+      display: block;
+      width: 100%;
+      height: 20vh; }
+      section .menu a, section .menu p, section .menu h1 {
+        font-size: 1rem; }
+    section .tabs {
+      display: block;
+      width: 100%;
+      height: 80vh;
+      scroll-snap-type: y mandatory;
+      overflow-x: visible;
+      overflow-y: scroll; }
+      section .tabs .tab {
+        scroll-snap-align: start;
+        padding: 1rem;
+        height: auto;
+        min-height: 100%;
+        overflow-y: hidden; }
+        section .tabs .tab .title {
           display: block;
-          scroll-snap-align: start;
-          padding: 1rem 1.5rem; }
-          html .container section .tabs .tab .title, body .container section .tabs .tab .title {
-            display: block;
-            text-align: center;
-            font-size: 1.5rem;
-            margin-bottom: 1rem; }
-      html .container section .menu, body .container section .menu {
-        display: none; }
-      html .container section .mobile-title, body .container section .mobile-title {
-        display: block;
-        width: 100%;
-        height: 10vh;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center; }
-        html .container section .mobile-title h1, body .container section .mobile-title h1 {
-          font-size: 2rem; } }
+          text-align: center;
+          font-size: 1.5rem; } }
+@media only screen and (max-width: 350px) {
+  section .tabs .tab {
+    scroll-snap-align: none; } }
 * {
   margin: 0;
   padding: 0;
