@@ -4,7 +4,8 @@
   "description": "My personal website",
   "scripts": {
     "dev-node-sass": "sass --watch css/main.scss css/main.css",
-    "dev-ruby-sass": "sass --watch css/main.scss:css/main.css"
+    "dev-ruby-sass": "sass --watch css/main.scss:css/main.css",
+    "build": ""
   },
   "author": "",
   "license": "ISC",
