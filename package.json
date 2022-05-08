@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "description": "My personal website",
   "scripts": {
-    "dev-node-sass": "sass --watch css/main.scss public/css/styles.css",
-    "dev-ruby-sass": "sass --watch css/main.scss:public/css/styles.css",
+    "dev-node": "concurrently \"sass --watch css/main.scss public/css/styles.css\"",
+    "dev-nix": "concurrently \"sass --watch css/main.scss:public/css/styles.css\" \"live-server ./public\"",
     "build": "sass css/main.scss public/css/main.css"
   },
   "author": "Abe Hidek",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^7.1.0",
     "sass": "^1.51.0"
   }
 }
