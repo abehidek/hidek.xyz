@@ -6,26 +6,72 @@
 html, body {
   width: 100vw;
   height: 100vh;
-  margin: 0;
-  background: red; }
+  margin: 0; }
+  html p, body p {
+    font-size: 1.25rem; }
   html .container, body .container {
     margin: 0;
     width: 100%;
     height: 100%;
     width: 100%;
-    background: green;
     scroll-snap-type: y mandatory;
     overflow-y: scroll; }
     html .container section, body .container section {
       display: flex;
-      justify-content: center;
-      align-items: center;
       width: 100%;
       height: 100%;
       scroll-snap-align: start; }
       html .container section:nth-of-type(1), body .container section:nth-of-type(1) {
-        background: purple; }
+        display: flex; }
+        html .container section:nth-of-type(1) .tabs, body .container section:nth-of-type(1) .tabs {
+          height: 100%;
+          width: 100%; }
+          html .container section:nth-of-type(1) .tabs .tab, body .container section:nth-of-type(1) .tabs .tab {
+            display: none;
+            padding: 2rem 2.5rem;
+            width: 100%;
+            height: 100%;
+            overflow-x: visible;
+            overflow-y: scroll; }
+          html .container section:nth-of-type(1) .tabs .tab.active, body .container section:nth-of-type(1) .tabs .tab.active {
+            display: block; }
+        html .container section:nth-of-type(1) .menu, body .container section:nth-of-type(1) .menu {
+          height: 100%;
+          width: 50%;
+          gap: 1rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center; }
+          html .container section:nth-of-type(1) .menu p, html .container section:nth-of-type(1) .menu h1, body .container section:nth-of-type(1) .menu p, body .container section:nth-of-type(1) .menu h1 {
+            font-size: 3rem;
+            cursor: pointer; }
+            html .container section:nth-of-type(1) .menu p:hover, html .container section:nth-of-type(1) .menu h1:hover, body .container section:nth-of-type(1) .menu p:hover, body .container section:nth-of-type(1) .menu h1:hover {
+              color: blue; }
+          html .container section:nth-of-type(1) .menu h1, body .container section:nth-of-type(1) .menu h1 {
+            font-size: 3.5rem; }
       html .container section:nth-of-type(2), body .container section:nth-of-type(2) {
         background: blue; }
+
+@media only screen and (max-width: 800px) {
+  html .container, body .container {
+    scroll-snap-type: none; }
+    html .container section, body .container section {
+      height: auto; }
+      html .container section:nth-of-type(1), body .container section:nth-of-type(1) {
+        flex-direction: column; }
+        html .container section:nth-of-type(1) .tabs, body .container section:nth-of-type(1) .tabs {
+          justify-content: start;
+          align-items: start; }
+        html .container section:nth-of-type(1) .menu, body .container section:nth-of-type(1) .menu {
+          width: 100%;
+          height: 25%;
+          padding: 1rem 0rem 0rem 0rem;
+          border-bottom: 0.2rem solid black; }
+          html .container section:nth-of-type(1) .menu p, body .container section:nth-of-type(1) .menu p {
+            font-size: 2rem; }
+          html .container section:nth-of-type(1) .menu h1, body .container section:nth-of-type(1) .menu h1 {
+            font-size: 2rem; } }
 
 /*# sourceMappingURL=main.css.map */
