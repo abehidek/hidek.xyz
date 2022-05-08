@@ -76,6 +76,9 @@ section {
   body {
     width: 100%; }
 
+  p {
+    font-size: 1rem; }
+
   .container {
     width: 100%; }
 
@@ -104,7 +107,6 @@ section {
         overflow-y: hidden; }
         section .tabs .tab .title {
           display: block;
-          text-align: center;
           font-size: 1.5rem; } }
 @media only screen and (max-width: 350px) {
   section .tabs .tab {
