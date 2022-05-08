@@ -10,6 +10,7 @@ in pkgs.mkShell {
     unstable.nodejs
     unstable.nodePackages.live-server
     unstable.nodePackages.typescript
+    unstable.concurrently
     pkgs.sl
   ];
   shellHook = "";
