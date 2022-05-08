@@ -56,8 +56,10 @@ html, body {
 
 @media only screen and (max-width: 800px) {
   html .container, body .container {
-    scroll-snap-type: none; }
+    scroll-snap-type: none;
+    overflow-y: visible; }
     html .container section, body .container section {
+      scroll-snap-align: none;
       height: auto; }
       html .container section:nth-of-type(1), body .container section:nth-of-type(1) {
         flex-direction: column; }

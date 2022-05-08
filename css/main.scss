@@ -77,8 +77,10 @@ html, body {
   html, body {
     .container {
       scroll-snap-type: none;
+      overflow-y: visible;
 
       section {
+        scroll-snap-align: none;
         height: auto;
         &:nth-of-type(1) {
           flex-direction: column;
