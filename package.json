@@ -5,9 +5,9 @@
   "scripts": {
     "dev-node-sass": "sass --watch css/main.scss css/main.css",
     "dev-ruby-sass": "sass --watch css/main.scss:css/main.css",
-    "build": ""
+    "build": "sass css/main.scss public/css/main.css"
   },
-  "author": "",
+  "author": "Abe Hidek",
   "license": "ISC",
   "dependencies": {
     "sass": "^1.51.0"
