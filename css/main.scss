@@ -1,19 +1,135 @@
-@import 'default';
-@import 'mobile';
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html,
-body {
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+html, body { 
+  background: green;
 }
 
-p,
-a {
-  color: black;
-  text-decoration: none;
+section {
+  width: 100%;
+  height: 100vh;
+
+  &.home {
+    background: red;
+    height: 90vh;
+  }
 }
+
+nav {
+  padding: 2rem;
+  height: 10vh;
+  width: 100%;
+  background: grey;
+  position: sticky;
+  top: 0px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+
+    li {
+      letter-spacing: 2px;
+    }
+  }
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+
+  div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+  }
+}
+
+@media (max-width: 900px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  section {
+    &.home {
+      // margin-top: 10vh;
+      height: 100vh;
+    }
+  }
+
+  nav {
+    position: fixed;
+    top: unset;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    // top: 80vh;
+    // bottom: 90vh;
+    // top: 0vh;
+    // right: 0vh;
+
+    .nav-list {
+      position: absolute;
+      // top: 10vh;
+      bottom: 10vh;
+      right: 0;
+      width: 100vw;
+      height: 90vh;
+      background: grey;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      gap: 0rem;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in;
+
+      li {
+        margin-left: 0;
+        opacity: 0;
+      }
+    }
+    .nav-list.active {
+      transform: translateX(0);
+    }
+
+    @keyframes navLinkFade {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .mobile-menu.active .line1 {
+      transform: rotate(-45deg) translate(-8px, 8px);
+    }
+    .mobile-menu.active .line2 {
+      opacity: 0;
+    }
+    .mobile-menu.active .line3 {
+      transform: rotate(45deg) translate(-5px, -7px);
+    }
+  }
+
+  h1 {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+}
+
+
