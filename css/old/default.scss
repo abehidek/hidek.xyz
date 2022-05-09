@@ -1,0 +1,101 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+p {
+  font-size: 1.25rem;
+}
+
+.container {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  .tabs {
+    height: 100%;
+    width: 70vw;
+    display: flex;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+
+    .tab {
+      scroll-snap-align: start;
+      flex: none;
+      .title {
+        display: none;
+        font-weight: bolder;
+      }
+      padding: 2rem 2.5rem;
+      width: 100%;
+      height: 100%;
+
+      &:nth-of-type(1) {
+        background: red;
+      }
+      &:nth-of-type(2) {
+        background: green;
+      }
+      &:nth-of-type(3) {
+        background: grey;
+      }
+    }
+  }
+  .menu {
+    height: 100vh;
+    width: 30vw;
+    gap: 1rem;
+    padding: 0rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: auto;
+
+    a,
+    p,
+    h1 {
+      font-size: 3rem;
+      cursor: pointer;
+      &:hover {
+        color: blue;
+      }
+    }
+    h1 {
+      font-size: 3.5rem;
+    }
+  }
+}
+
+@media only screen and (max-height: 600px) {
+  section {
+    .menu {
+      a,
+      h1,
+      p {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-height: 350px) {
+  section {
+    .menu {
+      a,
+      h1,
+      p {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
