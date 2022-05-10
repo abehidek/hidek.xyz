@@ -4,117 +4,91 @@
   box-sizing: border-box; }
 
 html, body {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  background: green; }
+  background: red;
+  overflow-x: hidden;
+  overflow-y: hidden; }
 
-.container {
+header {
+  background: red;
   width: 100%;
-  height: 100%;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll; }
-  .container section {
-    scroll-snap-align: start; }
-
-section {
-  width: 100%;
-  height: auto;
-  min-height: 100vh;
-  padding-top: 10vh; }
-  section.home {
-    background: red;
-    min-height: 90vh;
-    padding-top: unset; }
+  height: 10%; }
 
 nav {
-  padding: 2rem;
-  height: 10vh;
   width: 100%;
-  background: grey;
-  position: sticky;
-  top: 0px;
+  height: 100%;
+  background: blue;
   display: flex;
-  justify-content: space-around;
-  align-items: center; }
-  nav h1 {
-    background: red;
-    padding: 1rem; }
-    nav h1:hover {
-      color: purple; }
+  align-items: center;
+  justify-content: space-around; }
   nav .nav-list {
-    list-style: none;
+    z-index: 999;
+    position: absolute;
+    top: 10%;
+    background: green;
+    width: 100%;
+    height: 90%;
     display: flex;
-    gap: 3rem; }
-    nav .nav-list li {
-      letter-spacing: 2px;
-      padding: 1rem; }
-      nav .nav-list li:hover {
-        color: purple; }
-
-.mobile-menu {
-  display: none;
-  cursor: pointer; }
-  .mobile-menu div {
-    width: 32px;
-    height: 2px;
-    background: #fff;
-    margin: 8px;
-    transition: 0.3s; }
-
-@media (max-width: 900px) {
-  body {
-    overflow-x: hidden; }
-
-  section {
-    padding-top: unset; }
-    section.home {
-      min-height: 100vh; }
-
-  nav {
-    position: fixed;
-    top: unset;
-    bottom: 0;
-    left: 0;
-    right: 0; }
-    nav .nav-list {
-      position: absolute;
-      bottom: 10vh;
-      right: 0;
-      width: 100vw;
-      height: 90vh;
-      background: grey;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
-      gap: 0rem;
-      transform: translateX(100%);
-      transition: transform 0.3s ease-in; }
-      nav .nav-list li {
-        margin-left: 0;
-        opacity: 0; }
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in; }
     nav .nav-list.active {
-      transform: translateX(0); }
-  @keyframes navLinkFade {
-    from {
-      opacity: 0;
-      transform: translateX(50px); }
-    to {
-      opacity: 1;
-      transform: translateX(0); } }
-    nav .mobile-menu.active .line1 {
-      transform: rotate(-45deg) translate(-8px, 8px); }
-    nav .mobile-menu.active .line2 {
+      transform: translateY(0); }
+    nav .nav-list li {
+      padding: 1rem;
+      margin-left: 0;
       opacity: 0; }
-    nav .mobile-menu.active .line3 {
-      transform: rotate(45deg) translate(-5px, -7px); }
+  nav .mobile-menu {
+    cursor: pointer; }
+    nav .mobile-menu div {
+      width: 32px;
+      height: 3px;
+      background: #000;
+      margin: 8px;
+      transition: 0.3s; }
 
-  h1 {
-    display: none; }
+main {
+  width: 100%;
+  height: 90%; }
 
-  .mobile-menu {
-    display: block; } }
-@media (max-width: 300px) {
-  .container section {
-    scroll-snap-align: none; } }
+section {
+  flex: none;
+  width: 100%;
+  height: 90%;
+  background: green;
+  position: absolute; }
+  section.home {
+    background: purple; }
+  section.about {
+    background: blue;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in; }
+    section.about.active {
+      transform: translateX(0); }
+
+.sel-about {
+  color: red; }
+  .sel-about:hover {
+    color: blue; }
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px); }
+  to {
+    opacity: 1;
+    transform: translateX(0); } }
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px); }
+
+.mobile-menu.active .line2 {
+  opacity: 0; }
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-8px, -8px); }
 
 /*# sourceMappingURL=styles.css.map */
