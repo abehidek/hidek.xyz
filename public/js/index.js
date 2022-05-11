@@ -5,7 +5,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	
 	setTimeout(() => {
     intro.classList.add("end");
-	}, 1000)
+	}, 500)
 })
 
 class MobileNav {

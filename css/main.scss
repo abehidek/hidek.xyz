@@ -1,6 +1,10 @@
+$x-padding: calc(3rem);
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 @import 'intro';
 @import 'default';
 @import 'nav';
+
 
 * {
 	margin: 0;
@@ -12,5 +16,21 @@ html, body {
 	width: 100%;
 	height: 100vh;
 	overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
 	// background: red;
+}
+
+p {
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.8rem 1.2rem;
+  border: none;
+  text-decoration: none;
+
+  &:hover {
+    background-color: purple;
+    color: white;
+  }
 }

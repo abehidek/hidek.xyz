@@ -1,8 +1,41 @@
 main {
   position: absolute;
   top: 10vh;
-  background: green;
+  // background: green;
   width: 100%;
   height: auto;
   min-height: 90vh;
 }
+
+.home {
+  width: 100%;
+  // background: red;
+  max-height: 100vh;
+  padding: calc(2rem) $x-padding;
+
+  h3 {
+    font-size: calc(1.5rem);
+    display: none;
+  } 
+
+  h1 {
+    font-size: calc(2rem);
+  }
+  .links {
+    margin-top: 2rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+.home {
+  h3 {
+    display: block;
+  }
+}
+}
+
+@media only screen and (min-width: 900px) {
+.home {
+}
+}
+

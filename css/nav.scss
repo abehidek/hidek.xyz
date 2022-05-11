@@ -4,13 +4,18 @@ nav {
   height: 10vh;
   background: transparent;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 0;
+
+  h1 {
+    margin-left: $x-padding;
+  }
   
   .mobile-menu {
     cursor: pointer;
+    margin-right: $x-padding;
 
     div {
       width: 32px;
