@@ -43,10 +43,10 @@ class MobileNav {
 
   addClickEvent() {
     this.mobileMenu.addEventListener("click", this.handleClick);
-    this.navLinks.forEach((link) => {
-      link.addEventListener("click", this.handleClick);
-      link.addEventListener("click", this.showElement);
-    });
+    // this.navLinks.forEach((link) => {
+    //   link.addEventListener("click", this.handleClick);
+    //   link.addEventListener("click", this.showElement);
+    // });
     //this.navHomeLink.addEventListener("click", this.scrollToHome);
   }
 
