@@ -21,10 +21,10 @@ main {
   min-height: 90vh; }
 
 nav {
-  z-index: 2;
+  z-index: 1;
   width: 100%;
   height: 10vh;
-  background: blue;
+  background: transparent;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -39,11 +39,11 @@ nav {
       margin: 8px;
       transition: 0.3s; }
   nav .nav-list {
-    z-index: 3;
-    position: absolute;
-    top: 10vh;
+    z-index: -1;
+    position: fixed;
+    top: 0;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     background: lightpink;
     transform: translateX(100vw);
     transition: transform 0.3s ease-in;
