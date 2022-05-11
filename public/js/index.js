@@ -1,3 +1,13 @@
+let intro = document.querySelector(".intro");
+
+window.addEventListener("DOMContentLoaded", () => {
+	console.log("INIT");
+	
+	setTimeout(() => {
+    intro.classList.add("end");
+	}, 1000)
+})
+
 class MobileNav {
   constructor(mobileMenu, navList, navLinks) {
     this.mobileMenu = document.querySelector(mobileMenu);
