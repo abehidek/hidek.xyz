@@ -1,47 +1,35 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
-
-html, body {
+.intro {
+  z-index: 1;
   width: 100%;
   height: 100vh;
-  background: red;
-  overflow-x: hidden;
-  overflow-y: hidden; }
+  background-color: #2e3440;
+  position: fixed;
+  transform: translateY(0);
+  transition: transform 0.3s ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .intro.end {
+    transform: translateY(-100vh); }
 
-header {
-  background: red;
+main {
+  position: absolute;
+  top: 10vh;
+  background: green;
   width: 100%;
-  height: 10%; }
+  height: auto;
+  min-height: 90vh; }
 
 nav {
+  z-index: 2;
   width: 100%;
-  height: 100%;
+  height: 10vh;
   background: blue;
   display: flex;
+  justify-content: space-around;
   align-items: center;
-  justify-content: space-around; }
-  nav .nav-list {
-    z-index: 999;
-    position: absolute;
-    top: 10%;
-    background: green;
-    width: 100%;
-    height: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    list-style: none;
-    transform: translateY(100%);
-    transition: transform 0.3s ease-in; }
-    nav .nav-list.active {
-      transform: translateY(0); }
-    nav .nav-list li {
-      padding: 1rem;
-      margin-left: 0;
-      opacity: 0; }
+  position: fixed;
+  top: 0; }
   nav .mobile-menu {
     cursor: pointer; }
     nav .mobile-menu div {
@@ -50,30 +38,25 @@ nav {
       background: #000;
       margin: 8px;
       transition: 0.3s; }
-
-main {
-  width: 100%;
-  height: 90%; }
-
-section {
-  flex: none;
-  width: 100%;
-  height: 90%;
-  background: green;
-  position: absolute; }
-  section.home {
-    background: purple; }
-  section.about {
-    background: blue;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in; }
-    section.about.active {
+  nav .nav-list {
+    z-index: 3;
+    position: absolute;
+    top: 10vh;
+    width: 100%;
+    height: 90vh;
+    background: lightpink;
+    transform: translateX(100vw);
+    transition: transform 0.3s ease-in;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem; }
+    nav .nav-list.active {
       transform: translateX(0); }
-
-.sel-about {
-  color: red; }
-  .sel-about:hover {
-    color: blue; }
+    nav .nav-list li {
+      opacity: 0;
+      list-style: none; }
 
 @keyframes navLinkFade {
   from {
@@ -90,5 +73,15 @@ section {
 
 .mobile-menu.active .line3 {
   transform: rotate(45deg) translate(-8px, -8px); }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden; }
 
 /*# sourceMappingURL=styles.css.map */
