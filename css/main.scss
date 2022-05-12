@@ -36,7 +36,7 @@ p {
   padding: 0.8rem 1.2rem;
   border: none;
   text-decoration: none;
-  font-size: calc(1rem);
+  font-size: calc(1rem + 0.2vw);
   cursor: pointer;
   background-color: $foreground;
 

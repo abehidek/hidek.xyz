@@ -114,19 +114,21 @@ main {
   max-height: 100vh;
   padding: calc(6rem) calc(3rem); }
   .home h3 {
-    font-size: calc(1.5rem);
+    font-size: calc(1.5rem + 0.4vw);
     display: none; }
   .home h1 {
     margin-top: 0.5rem;
-    font-size: calc(3rem);
+    font-size: calc(2rem + 2vw);
     line-height: 100%; }
     .home h1 span {
       color: #88c0d0; }
   .home .description {
     margin-top: 2rem; }
     .home .description p {
-      font-size: calc(1.2rem); }
+      font-size: calc(1rem + 0.5vw); }
   .home .links {
+    display: flex;
+    gap: 0.5rem;
     margin-top: 4rem; }
 
 @media only screen and (min-width: 600px) {
@@ -161,7 +163,7 @@ p {
   padding: 0.8rem 1.2rem;
   border: none;
   text-decoration: none;
-  font-size: calc(1rem);
+  font-size: calc(1rem + 0.2vw);
   cursor: pointer;
   background-color: #d8dee9; }
   .button:hover {

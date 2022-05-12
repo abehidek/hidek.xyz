@@ -9,18 +9,17 @@ main {
 
 .home {
   width: 100%;
-  // background: red;
   max-height: 100vh;
   padding: calc(6rem) $x-padding;
 
   h3 {
-    font-size: calc(1.5rem);
+    font-size: calc(1.5rem + 0.4vw);
     display: none;
   } 
 
   h1 {
     margin-top: 0.5rem;
-    font-size: calc(3rem);
+    font-size: calc(2rem + 2vw);
     line-height: 100%;
 
     span {
@@ -31,10 +30,12 @@ main {
     margin-top: 2rem;
 
     p {
-      font-size: calc(1.2rem);
+      font-size: calc(1rem + 0.5vw);
     }
   }
   .links {
+    display: flex;
+    gap: 0.5rem;
     margin-top: 4rem;
   }
 }
