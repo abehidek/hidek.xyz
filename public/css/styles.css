@@ -13,33 +13,19 @@
   .intro.end {
     transform: translateY(-100vh); }
 
-main {
-  position: absolute;
-  top: 10vh;
-  width: 100%;
-  height: auto;
-  min-height: 90vh; }
+.line {
+  opacity: 1;
+  width: 4.5rem;
+  height: 0.4rem;
+  background-color: black; }
+  .line:nth-of-type(2) {
+    opacity: 0; }
 
-.home {
-  width: 100%;
-  max-height: 100vh;
-  padding: calc(2rem) calc(3rem); }
-  .home h3 {
-    font-size: calc(1.5rem);
-    display: none; }
-  .home h1 {
-    font-size: calc(2rem); }
-  .home .links {
-    margin-top: 2rem; }
-
-@media only screen and (min-width: 600px) {
-  .home h3 {
-    display: block; } }
 nav {
   z-index: 1;
   width: 100%;
   height: 10vh;
-  background: transparent;
+  background: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -64,17 +50,27 @@ nav {
     height: 100vh;
     background: lightpink;
     transform: translateX(100vw);
-    transition: transform 0.3s ease-in;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    gap: 1rem; }
+    transition: transform 0.3s ease-in; }
+    nav .nav-list ul {
+      top: 10vh;
+      position: fixed;
+      width: 100%;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      gap: 1rem; }
+      nav .nav-list ul li {
+        opacity: 0;
+        list-style: none;
+        padding: 1.5rem 2rem;
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem; }
     nav .nav-list.active {
       transform: translateX(0); }
-    nav .nav-list li {
-      opacity: 0;
-      list-style: none; }
 
 @keyframes navLinkFade {
   from {
@@ -92,6 +88,31 @@ nav {
 .mobile-menu.active .line3 {
   transform: rotate(45deg) translate(-8px, -8px); }
 
+main {
+  position: absolute;
+  top: 10vh;
+  width: 100%;
+  height: auto;
+  min-height: 90vh; }
+
+.home {
+  width: 100%;
+  max-height: 100vh;
+  padding: calc(2rem) calc(3rem); }
+  .home h3 {
+    font-size: calc(1.5rem);
+    display: none; }
+  .home h1 {
+    font-size: calc(2rem); }
+  .home .links {
+    margin-top: 2rem; }
+
+@media only screen and (min-width: 600px) {
+  .home h3 {
+    display: block; }
+
+  .line:nth-of-type(2) {
+    opacity: 1; } }
 * {
   margin: 0;
   padding: 0;

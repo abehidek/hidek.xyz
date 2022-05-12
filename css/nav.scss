@@ -1,8 +1,21 @@
+.line {
+  opacity: 1;
+  width: 4.5rem;
+  height: 0.4rem;
+  background-color: black;
+
+  &:nth-of-type(2) {
+    // display: none;
+    opacity: 0;
+  }
+}
+
+
 nav {
   z-index: 1;
   width: 100%;
   height: 10vh;
-  background: transparent;
+  background: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,21 +47,36 @@ nav {
     background: lightpink;
     transform: translateX(100vw);
     transition: transform 0.3s ease-in;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
 
-    gap: 1rem;
+    ul {
+      top: 10vh;
+      position: fixed;
+      width: 100%;
+      height: 90vh;
+      // background: green;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      gap: 1rem;
+
+      li {
+        opacity: 0;
+        list-style: none;
+        padding: 1.5rem 2rem;
+        // background: red;
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+      }
+    }
 
     &.active {
       transform: translateX(0);
     }
     
-    li {
-      opacity: 0;
-      list-style: none;
-    }
   }
 }
 
