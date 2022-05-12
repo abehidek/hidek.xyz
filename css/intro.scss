@@ -1,5 +1,5 @@
 .intro {
-	z-index: 1;
+	z-index: 101;
 	width: 100%;
 	height: 100vh;
 	background-color: #2e3440;
@@ -9,6 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
 
   &.end {
     transform: translateY(-100vh);

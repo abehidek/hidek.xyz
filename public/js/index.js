@@ -1,11 +1,33 @@
 let intro = document.querySelector(".intro");
+let mobmenu = document.querySelector(".mobile-menu")
+
+// window.onload = () => {
+//   console.log("Inited")
+//   const link = document.querySelector("#link")
+//   link.addEventListener("click", e => {
+//     e.preventDefault();
+//   })
+// }
 
 window.addEventListener("DOMContentLoaded", () => {
 	console.log("INIT");
-	
+	const links = document.querySelectorAll('a');
+
+  links.forEach((link) => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      let target = e.target.href;
+      intro.classList.remove("end");
+      mobmenu.classList.remove("show");
+      setTimeout(() => {
+        window.location.href = target;
+      }, 500)
+    })
+  })
 	setTimeout(() => {
     intro.classList.add("end");
-  }, 200)
+    mobmenu.classList.add("show")
+  }, 500)
 })
 
 class MobileNav {

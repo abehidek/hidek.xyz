@@ -1,4 +1,8 @@
 $x-padding: calc(3rem);
+$dark-accent: #5e81ac;
+$light-accent: #88c0d0;
+$background: #3b4252;
+$foreground: #d8dee9;
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 @import 'intro';
@@ -19,18 +23,25 @@ html, body {
   font-family: 'Poppins', sans-serif;
 	// background: red;
 }
-
+a {
+  color: unset;
+  text-decoration: none;
+  cursor: pointer;
+}
 p {
   font-size: 1rem;
 }
 
-button {
+.button {
   padding: 0.8rem 1.2rem;
   border: none;
   text-decoration: none;
+  font-size: calc(1rem);
+  cursor: pointer;
+  background-color: $foreground;
 
   &:hover {
-    background-color: purple;
+    background-color: $dark-accent;
     color: white;
   }
 }

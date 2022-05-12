@@ -11,7 +11,7 @@ main {
   width: 100%;
   // background: red;
   max-height: 100vh;
-  padding: calc(2rem) $x-padding;
+  padding: calc(6rem) $x-padding;
 
   h3 {
     font-size: calc(1.5rem);
@@ -19,10 +19,23 @@ main {
   } 
 
   h1 {
-    font-size: calc(2rem);
+    margin-top: 0.5rem;
+    font-size: calc(3rem);
+    line-height: 100%;
+
+    span {
+      color: $light-accent;
+    }
+  }
+  .description {
+    margin-top: 2rem;
+
+    p {
+      font-size: calc(1.2rem);
+    }
   }
   .links {
-    margin-top: 2rem;
+    margin-top: 4rem;
   }
 }
 
@@ -41,5 +54,9 @@ main {
 }
 
 @media only screen and (min-width: 900px) {
+.home {
+  // background: red;
+  width: 60%;
+}
 }
 
