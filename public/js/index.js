@@ -91,7 +91,7 @@ mobileNav.init();
 particlesJS("particles-js", {
   "particles": {
     "number": {
-      "value": 140,
+      "value": 80,
       "density": {
         "enable": true,
         "value_area": 800
@@ -101,7 +101,7 @@ particlesJS("particles-js", {
       "value": "#000"
     },
     "shape": {
-      "type": "circle",
+      "type": "triangle",
       "stroke": {
         "width": 0,
         "color": "#000000"
@@ -162,7 +162,7 @@ particlesJS("particles-js", {
     "events": {
       "onhover": {
         "enable": true,
-        "mode": "grab"
+        "mode": "repulse"
       },
       "onclick": {
         "enable": true,
