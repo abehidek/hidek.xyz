@@ -136,7 +136,6 @@ main {
   width: 100%;
   padding: calc(1.5rem + 5vh) 3rem;
   height: auto;
-  overflow-y: scroll;
 }
 .home .start {
   min-height: 100vh;
@@ -164,8 +163,30 @@ main {
   gap: 0.5rem;
   margin-top: calc(2rem + 1vh);
 }
-.home .test {
-  background: red;
+.home .projects {
+  padding: 10vh 0;
+}
+.home .projects h2 {
+  font-size: calc(2rem + 0.4vw);
+}
+.home .projects .grid-projects {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+.home .projects .grid-projects img {
+  max-width: 100%;
+}
+
+footer {
+  background: grey;
+  width: 100%;
+  height: 10vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, #000000, #333333);
 }
 
 .animation {
@@ -182,6 +203,9 @@ main {
 @media only screen and (min-width: 600px) {
   .home .start h3 {
     display: block;
+  }
+  .home .projects .grid-projects {
+    grid-template-columns: 1fr 1fr;
   }
 
   .line:nth-of-type(2) {
@@ -200,6 +224,11 @@ main {
     width: 70%;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .home .projects .grid-projects {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -208,7 +237,6 @@ main {
 
 html, body {
   width: 100%;
-  height: 100vh;
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
 }

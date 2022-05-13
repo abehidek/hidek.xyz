@@ -2,7 +2,6 @@
   width: 100%;
   padding: calc(1.5rem + 5vh) $x-padding;
   height: auto;
-  overflow-y: scroll;
 
   .start {
     min-height: 100vh;
@@ -33,11 +32,36 @@
       margin-top: calc(2rem + 1vh);
     }
   }
-  .test {
-    background: red;
+  .projects {
+    padding: 10vh 0;
+
+    h2 {
+      font-size: calc(2rem + 0.4vw);
+    } 
+
+    .grid-projects {
+      margin-top: 2rem;
+      display: grid;
+      gap: 1rem;
+
+      img {
+        max-width: 100%;
+      }
+    }
   }
+
 }
 
+footer {
+  background: grey;
+  width: 100%;
+  height: 10vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, #000000, #333333);
+}
 .animation {
   z-index: -1;
   position: absolute;
@@ -55,6 +79,9 @@
       h3 {
         display: block;
       }
+    }
+    .projects .grid-projects {
+      grid-template-columns: 1fr 1fr;
     }
   }
   .line {
@@ -76,4 +103,10 @@
       width: 70%;
     }
   }
+}
+
+@media only screen and (min-width: 1200px) {
+    .home .projects .grid-projects {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
 }
