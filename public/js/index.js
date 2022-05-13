@@ -1,7 +1,7 @@
 let intro = document.querySelector(".intro");
 let mobmenu = document.querySelector(".mobile-menu")
 
-window.addEventListener("DOMContentLoaded", () => {
+window.onload = () => {
 	console.log("INIT");
 	const links = document.querySelectorAll('.page-link');
   const anchors = document.querySelectorAll('.page-anchor');
@@ -34,7 +34,7 @@ window.addEventListener("DOMContentLoaded", () => {
     intro.classList.add("end");
     mobmenu.classList.add("show")
   }, 500)
-})
+}
 
 class MobileNav {
   constructor(mobileMenu, navList, navLinks) {
