@@ -3,6 +3,9 @@
   padding: calc(1.5rem + 5vh) $x-padding;
   height: auto;
 
+  span {
+    color: $light-accent;
+  }
   h2 {
     font-size: calc(2rem + 0.4vw);
   }
@@ -19,9 +22,6 @@
       font-size: calc(2rem + 2vw);
       line-height: 100%;
 
-      span {
-        color: $light-accent;
-      }
     }
     .description {
       margin-top: 2rem;
@@ -40,7 +40,7 @@
     // padding: 0 10vh;
     padding-top: 10vh;
     padding-bottom: 10vh;
-    min-height: 80vh;
+    min-height: 90vh;
 
     .grid-projects {
       margin-top: 2rem;

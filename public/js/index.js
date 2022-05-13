@@ -51,10 +51,12 @@ class MobileNav {
     })
   }
 
-  handleClick() {
-    this.navList.classList.toggle(this.activeClass);
-    this.animateLinks();
-    this.mobileMenu.classList.toggle(this.activeClass);
+  handleClick(evt) {
+    if (evt.currentTarget.innerText != 'Home') {
+      this.navList.classList.toggle(this.activeClass);
+      this.animateLinks();
+      this.mobileMenu.classList.toggle(this.activeClass);
+    }
   }
   
   showElement(evt) {
@@ -67,10 +69,9 @@ class MobileNav {
 
   addClickEvent() {
     this.mobileMenu.addEventListener("click", this.handleClick);
-    // this.navLinks.forEach((link) => {
-    //   link.addEventListener("click", this.handleClick);
-    //   link.addEventListener("click", this.showElement);
-    // });
+    this.navLinks.forEach((link) => {
+      link.addEventListener("click", this.handleClick);
+    });
     //this.navHomeLink.addEventListener("click", this.scrollToHome);
   }
 
