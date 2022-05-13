@@ -1,0 +1,27 @@
+.about {
+  width: 100%;
+  padding: calc(1.5rem + 5vh) $x-padding;
+  height: auto;
+  min-height: 80vh;
+
+  span {
+    color: $light-accent;
+  }
+  h1 {
+    font-size: calc(2rem + 2vw);
+  }
+  p {
+    margin-top: 1rem;
+    font-size: calc(1rem + 0.3vw);
+  }
+}
+
+@media only screen and (min-width: 600px) {}
+@media only screen and (min-width: 900px) {
+  .about {
+    padding-left: calc(8rem + 4vw);
+    width: 80%;
+    text-align: justify;
+  }
+}
+@media only screen and (min-width: 1200px) {}

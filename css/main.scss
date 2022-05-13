@@ -1,4 +1,4 @@
-$x-padding: calc(3rem);
+$x-padding: calc(1.2rem + 1vw);
 // $dark-accent: #5e81ac;
 // $light-accent: #88c0d0;
 $dark-accent: #7c1fe0;
@@ -11,7 +11,7 @@ $foreground: #d8dee9;
 @import 'nav';
 @import 'default';
 @import 'home';
-
+@import 'about';
 
 * {
 	margin: 0;
@@ -46,4 +46,17 @@ p {
     background-color: $dark-accent;
     color: white;
   }
+}
+
+footer {
+  padding: 0rem $x-padding;
+  background: grey;
+  width: 100%;
+  min-height: 10vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(145deg, #000000, #333333);
 }
