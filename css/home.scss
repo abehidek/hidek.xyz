@@ -55,11 +55,29 @@
 
   .contact {
     // padding: 0 10vh;
-    background: green;
     padding-top: 10vh;
     padding-bottom: 10vh;
     min-height: 80vh;
 
+    form {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 2rem 0rem;
+      gap: 1rem;
+
+      .field {
+        background: #eceff4;
+        outline: none;
+        width: 100%;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border: none;
+      }
+      textarea {
+        height: 10rem;
+      } 
+    }
   }
 }
 
@@ -82,6 +100,7 @@ footer {
   bottom: 0;
   height: 100vh;
   overflow-y: hidden;
+  filter: blur(4px);
 }
 
 @media only screen and (min-width: 600px) {
@@ -90,9 +109,6 @@ footer {
       h3 {
         display: block;
       }
-    }
-    .projects .grid-projects {
-      grid-template-columns: 1fr 1fr;
     }
   }
   .line {
@@ -113,6 +129,21 @@ footer {
     .start .description {
       width: 70%;
     }
+
+    .projects .grid-projects {
+      grid-template-columns: 1fr 1fr;
+    }
+    .contact form {
+      width: 80%;
+      grid-template-columns: 1fr 1fr;
+
+      input:nth-of-type(3) {
+        grid-column: span 2;
+      }
+      textarea {
+        grid-column: span 2;
+      } 
+    }
   }
 }
 
@@ -120,4 +151,5 @@ footer {
     .home .projects .grid-projects {
       grid-template-columns: 1fr 1fr 1fr;
     }
+    .home .contact form { width: 60%; }
 }

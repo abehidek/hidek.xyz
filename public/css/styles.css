@@ -180,10 +180,27 @@ main {
   max-width: 100%;
 }
 .home .contact {
-  background: green;
   padding-top: 10vh;
   padding-bottom: 10vh;
   min-height: 80vh;
+}
+.home .contact form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 2rem 0rem;
+  gap: 1rem;
+}
+.home .contact form .field {
+  background: #eceff4;
+  outline: none;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+}
+.home .contact form textarea {
+  height: 10rem;
 }
 
 footer {
@@ -206,14 +223,12 @@ footer {
   bottom: 0;
   height: 100vh;
   overflow-y: hidden;
+  filter: blur(4px);
 }
 
 @media only screen and (min-width: 600px) {
   .home .start h3 {
     display: block;
-  }
-  .home .projects .grid-projects {
-    grid-template-columns: 1fr 1fr;
   }
 
   .line:nth-of-type(2) {
@@ -231,22 +246,39 @@ footer {
   .home .start .description {
     width: 70%;
   }
+  .home .projects .grid-projects {
+    grid-template-columns: 1fr 1fr;
+  }
+  .home .contact form {
+    width: 80%;
+    grid-template-columns: 1fr 1fr;
+  }
+  .home .contact form input:nth-of-type(3) {
+    grid-column: span 2;
+  }
+  .home .contact form textarea {
+    grid-column: span 2;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .home .projects .grid-projects {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .home .contact form {
+    width: 60%;
   }
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 html, body {
   width: 100%;
   overflow-x: hidden;
-  font-family: "Poppins", sans-serif;
 }
 
 a {
