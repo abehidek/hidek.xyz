@@ -10,24 +10,31 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white; }
-  .intro.end {
-    transform: translateY(-100vh); }
+  color: white;
+}
+.intro.end {
+  transform: translateY(-100vh);
+}
 
 @keyframes navLinkFade {
   from {
     opacity: 0;
-    transform: translateX(50px); }
+    transform: translateX(50px);
+  }
   to {
     opacity: 1;
-    transform: translateX(0); } }
+    transform: translateX(0);
+  }
+}
 .line {
   opacity: 1;
   width: 4.5rem;
   height: 0.4rem;
-  background-color: black; }
-  .line:nth-of-type(2) {
-    opacity: 0; }
+  background-color: black;
+}
+.line:nth-of-type(2) {
+  opacity: 0;
+}
 
 nav {
   z-index: 1;
@@ -38,99 +45,128 @@ nav {
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  top: 0; }
-  nav h1 {
-    margin-left: calc(3rem); }
-  nav .mobile-menu {
-    display: none;
-    opacity: 0;
-    cursor: pointer;
-    margin-right: calc(3rem);
-    pointer-events: none;
-    transition: 0.5s ease; }
-    nav .mobile-menu.show {
-      animation: navLinkFade 0.3s ease forwards 0.3s;
-      display: block;
-      pointer-events: all; }
-    nav .mobile-menu div {
-      width: 32px;
-      height: 3px;
-      background: #000;
-      margin: 8px;
-      transition: 0.3s; }
-  nav .nav-list {
-    z-index: -1;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    background: #88c0d0;
-    transform: translateX(100vw);
-    transition: transform 0.3s ease-in; }
-    nav .nav-list ul {
-      top: 10vh;
-      position: fixed;
-      width: 100%;
-      height: 90vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
-      gap: 1rem; }
-      nav .nav-list ul li {
-        opacity: 0;
-        list-style: none;
-        font-size: 2rem;
-        display: flex;
-        align-items: center; }
-        nav .nav-list ul li a {
-          padding: 1.5rem 2rem;
-          gap: 0.5rem; }
-        nav .nav-list ul li:hover a, nav .nav-list ul li.active a {
-          color: white; }
-        nav .nav-list ul li:hover div, nav .nav-list ul li.active div {
-          background: white; }
-    nav .nav-list.active {
-      transform: translateX(0); }
+  top: 0;
+}
+nav h1 {
+  margin-left: 3rem;
+}
+nav .mobile-menu {
+  display: none;
+  opacity: 0;
+  cursor: pointer;
+  margin-right: 3rem;
+  pointer-events: none;
+  transition: 0.5s ease;
+}
+nav .mobile-menu.show {
+  animation: navLinkFade 0.3s ease forwards 0.3s;
+  display: block;
+  pointer-events: all;
+}
+nav .mobile-menu div {
+  width: 32px;
+  height: 3px;
+  background: #000;
+  margin: 8px;
+  transition: 0.3s;
+}
+nav .nav-list {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: #88c0d0;
+  transform: translateX(100vw);
+  transition: transform 0.3s ease-in;
+}
+nav .nav-list ul {
+  top: 10vh;
+  position: fixed;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+}
+nav .nav-list ul li {
+  opacity: 0;
+  list-style: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+nav .nav-list ul li a {
+  padding: 1.5rem 2rem;
+  gap: 0.5rem;
+}
+nav .nav-list ul li:hover a, nav .nav-list ul li.active a {
+  color: white;
+}
+nav .nav-list ul li:hover div, nav .nav-list ul li.active div {
+  background: white;
+}
+nav .nav-list.active {
+  transform: translateX(0);
+}
 
 .mobile-menu.active .line1 {
-  transform: rotate(-45deg) translate(-8px, 8px); }
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
 
 .mobile-menu.active .line2 {
-  opacity: 0; }
+  opacity: 0;
+}
 
 .mobile-menu.active .line3 {
-  transform: rotate(45deg) translate(-8px, -8px); }
+  transform: rotate(45deg) translate(-8px, -8px);
+}
 
 main {
   position: absolute;
   top: 10vh;
   width: 100%;
   height: auto;
-  min-height: 90vh; }
+  min-height: 90vh;
+}
 
 .home {
   width: 100%;
-  padding: calc(6rem) calc(3rem);
+  padding: calc(1.5rem + 5vh) 3rem;
   height: auto;
-  overflow-y: scroll; }
-  .home h3 {
-    font-size: calc(1.5rem + 0.4vw);
-    display: none; }
-  .home h1 {
-    margin-top: 0.5rem;
-    font-size: calc(2rem + 2vw);
-    line-height: 100%; }
-    .home h1 span {
-      color: #88c0d0; }
-  .home .description {
-    margin-top: 2rem; }
-    .home .description p {
-      font-size: calc(1rem + 0.5vw); }
-  .home .links {
-    display: flex;
-    gap: 0.5rem;
-    margin-top: 4rem; }
+  overflow-y: scroll;
+}
+.home .start {
+  min-height: 100vh;
+}
+.home .start h3 {
+  font-size: calc(1.5rem + 0.4vw);
+  display: none;
+}
+.home .start h1 {
+  margin-top: 0.5rem;
+  font-size: calc(2rem + 2vw);
+  line-height: 100%;
+}
+.home .start h1 span {
+  color: #88c0d0;
+}
+.home .start .description {
+  margin-top: 2rem;
+}
+.home .start .description p {
+  font-size: calc(1rem + 0.5vw);
+}
+.home .start .links {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: calc(2rem + 1vh);
+}
+.home .test {
+  background: red;
+}
 
 .animation {
   z-index: -1;
@@ -139,32 +175,53 @@ main {
   right: 0;
   top: 0;
   bottom: 0;
-  overflow-y: hidden; }
+  height: 100vh;
+  overflow-y: hidden;
+}
 
 @media only screen and (min-width: 600px) {
-  .home h3 {
-    display: block; }
+  .home .start h3 {
+    display: block;
+  }
 
   .line:nth-of-type(2) {
-    opacity: 1; } }
+    opacity: 1;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .home {
+    padding-left: calc(8rem + 4vw);
+  }
+  .home .start h1 {
+    width: 90%;
+    font-size: calc(2rem + 3.6vw);
+  }
+  .home .start .description {
+    width: 70%;
+  }
+}
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 html, body {
   width: 100%;
   height: 100vh;
   overflow-x: hidden;
-  font-family: 'Poppins', sans-serif; }
+  font-family: "Poppins", sans-serif;
+}
 
 a {
   color: unset;
   text-decoration: none;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 p {
-  font-size: 1rem; }
+  font-size: 1rem;
+}
 
 .button {
   padding: 0.8rem 1.2rem;
@@ -172,9 +229,11 @@ p {
   text-decoration: none;
   font-size: calc(1rem + 0.2vw);
   cursor: pointer;
-  background-color: #d8dee9; }
-  .button:hover {
-    background-color: #5e81ac;
-    color: white; }
+  background-color: #d8dee9;
+}
+.button:hover {
+  background-color: #5e81ac;
+  color: white;
+}
 
 /*# sourceMappingURL=styles.css.map */

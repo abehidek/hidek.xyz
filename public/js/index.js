@@ -1,14 +1,6 @@
 let intro = document.querySelector(".intro");
 let mobmenu = document.querySelector(".mobile-menu")
 
-// window.onload = () => {
-//   console.log("Inited")
-//   const link = document.querySelector("#link")
-//   link.addEventListener("click", e => {
-//     e.preventDefault();
-//   })
-// }
-
 window.addEventListener("DOMContentLoaded", () => {
 	console.log("INIT");
 	const links = document.querySelectorAll('a');
@@ -16,12 +8,22 @@ window.addEventListener("DOMContentLoaded", () => {
   links.forEach((link) => {
     link.addEventListener("click", e => {
       e.preventDefault();
-      let target = e.target.href;
-      intro.classList.remove("end");
-      mobmenu.classList.remove("show");
-      setTimeout(() => {
-        window.location.href = target;
-      }, 500)
+      console.log(e.target.href)
+      if (e.target.href.includes("#")) {
+        const urlArray = e.target.href.split('/')
+        const url = urlArray[urlArray.length-1]
+        document.querySelector(url).scrollIntoView({
+          behavior: 'smooth'
+        })
+      }
+      else {
+        let target = e.target.href;
+        intro.classList.remove("end");
+        mobmenu.classList.remove("show");
+        setTimeout(() => {
+          window.location.href = target;
+        }, 500)
+      }
     })
   })
 	setTimeout(() => {
