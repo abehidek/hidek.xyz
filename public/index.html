@@ -10,7 +10,7 @@
     <div class="intro"></div>
     <div id="particles-js" class="animation"></div>
     <nav>
-      <h1><a href="/">Abe Hidek</a></h1>
+      <h1><a href="/" class="page-link">Abe Hidek</a></h1>
       <div class="mobile-menu">
         <div class="line1"></div>
         <div class="line2"></div>
@@ -19,11 +19,11 @@
       <div class="nav-list"> 
         <ul>
           <li class="active"><div class="line"></div>
-            <a href="/">Home</a>
+            <a class="page-link" href="/">Home</a>
           <div class="line"></div></li>
-          <li><a href="about.html">About me</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="https://blog.abehidek.me">Blog</a></li>
+          <li><a class="page-link" href="about.html">About me</a></li>
+          <li><a class="page-link" href="contact.html">Contact</a></li>
+          <li><a class="page-link" href="https://blog.abehidek.me">Blog</a></li>
         </ul>
       </div>
     </nav>
@@ -36,23 +36,33 @@
             <p>Currently working as an apprentice at Bosch Brasil. Always concerned with user experience, efficiency and code legibility.</p>
           </div>
           <div class="links">
-            <a class="button" href="about.html">About me</a>
-            <a class="button" href="#projects">My Projects</a>
+            <a class="button page-link" href="about.html">About me</a>
+            <a class="button page-link" href="#projects">My Projects</a>
           </div>
         </div>
         <div class="projects" id="projects">
           <h2>Some projects</h2>
           <div class="grid-projects">
-            <img src="https://github-readme-stats.vercel.app/api/pin/?username=abehidek&repo=dotfiles" alt="dotfiles project">
-            <img src="https://github-readme-stats.vercel.app/api/pin/?username=abehidek&repo=me" alt="personal website project">
-            <img src="https://github-readme-stats.vercel.app/api/pin/?username=abehidek&repo=blog" alt="blog project">
-            <img src="https://github-readme-stats.vercel.app/api/pin/?username=abehidek&repo=senai-des" alt="resources related to my course on senai">
-            <img src="https://github-readme-stats.vercel.app/api/pin/?username=abehidek&repo=bosch-smart-auto" alt="recourses related to my course on my work">
-            <img src="https://github-readme-stats.vercel.app/api/pin/?username=abehidek&repo=itweek-2018" alt="site developed in my course in 2018">
+            <a href="https://github.com/abehidek/dotfiles" target="_blank"><img src="https://github-readme-stats.vercel.app/api/pin/?username=abehidek&repo=dotfiles" alt="dotfiles project"></a>
+            <a href="https://github.com/abehidek/me" target="_blank"><img src="https://github-readme-stats.vercel.app/api/pin/?username=abehidek&repo=me" alt="personal website project"></a>
+            <a href="https://github.com/abehidek/blog" target="_blank"><img src="https://github-readme-stats.vercel.app/api/pin/?username=abehidek&repo=blog" alt="blog project"></a>
+            <a href="https://github.com/abehidek/senai-des" target="_blank"><img src="https://github-readme-stats.vercel.app/api/pin/?username=abehidek&repo=senai-des" alt="resources related to my course on senai"></a>
+            <a href="https://github.com/abehidek/bosch-smart-auto" target="_blank"><img src="https://github-readme-stats.vercel.app/api/pin/?username=abehidek&repo=bosch-smart-auto" alt="recourses related to my course on my work"></a>
+            <a href="https://github.com/abehidek/itweek-2018" target="_blank"><img src="https://github-readme-stats.vercel.app/api/pin/?username=abehidek&repo=itweek-2018" alt="site developed in my course in 2018"></a>
           </div>
         </div>
+        <div class="contact" id="contact">
+          <h2>Get in contact with me</h2>
+          <form action="https://formsubmit.co/hidek.abe@outlook.com" method="POST">
+            <input type="hidden" name="_subject" value="New email!">
+             <input type="email" name="email" placeholder="Your email" required>
+             <input type="text" name="name" placeholder="Write your message here" required>
+             <input type="hidden" name="_next" value="https://www.google.com">
+             <button type="submit">Send</button>
+          </form> 
+        </div>
       </div>
-      <footer>
+      <footer id="footer">
         <p>Made by Abe Hidek @2022. All rights deserved.</p>
       </footer>
     </main>

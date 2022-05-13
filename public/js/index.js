@@ -3,7 +3,7 @@ let mobmenu = document.querySelector(".mobile-menu")
 
 window.addEventListener("DOMContentLoaded", () => {
 	console.log("INIT");
-	const links = document.querySelectorAll('a');
+	const links = document.querySelectorAll('.page-link');
 
   links.forEach((link) => {
     link.addEventListener("click", e => {

@@ -3,6 +3,10 @@
   padding: calc(1.5rem + 5vh) $x-padding;
   height: auto;
 
+  h2 {
+    font-size: calc(2rem + 0.4vw);
+  }
+
   .start {
     min-height: 100vh;
 
@@ -33,11 +37,10 @@
     }
   }
   .projects {
-    padding: 10vh 0;
-
-    h2 {
-      font-size: calc(2rem + 0.4vw);
-    } 
+    // padding: 0 10vh;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    min-height: 80vh;
 
     .grid-projects {
       margin-top: 2rem;
@@ -50,6 +53,14 @@
     }
   }
 
+  .contact {
+    // padding: 0 10vh;
+    background: green;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    min-height: 80vh;
+
+  }
 }
 
 footer {

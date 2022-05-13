@@ -137,6 +137,9 @@ main {
   padding: calc(1.5rem + 5vh) 3rem;
   height: auto;
 }
+.home h2 {
+  font-size: calc(2rem + 0.4vw);
+}
 .home .start {
   min-height: 100vh;
 }
@@ -164,10 +167,9 @@ main {
   margin-top: calc(2rem + 1vh);
 }
 .home .projects {
-  padding: 10vh 0;
-}
-.home .projects h2 {
-  font-size: calc(2rem + 0.4vw);
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  min-height: 80vh;
 }
 .home .projects .grid-projects {
   margin-top: 2rem;
@@ -176,6 +178,12 @@ main {
 }
 .home .projects .grid-projects img {
   max-width: 100%;
+}
+.home .contact {
+  background: green;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  min-height: 80vh;
 }
 
 footer {
