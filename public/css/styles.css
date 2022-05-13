@@ -260,7 +260,7 @@ main {
 }
 .about {
   width: 100%;
-  padding: calc(1.5rem + 5vh) calc(1.2rem + 1vw);
+  padding: calc(1.5rem + 2vh) calc(1.2rem + 1vw);
   height: auto;
   min-height: 80vh;
 }
