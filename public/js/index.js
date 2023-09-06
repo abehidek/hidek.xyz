@@ -35,6 +35,8 @@ window.onload = () => {
   }, 500);
 };
 
+window.onunload = function () {};
+
 class MobileNav {
   constructor(mobileMenu, navList, navLinks) {
     this.mobileMenu = document.querySelector(mobileMenu);
