@@ -1,40 +1,39 @@
 let intro = document.querySelector(".intro");
-let mobmenu = document.querySelector(".mobile-menu")
+let mobmenu = document.querySelector(".mobile-menu");
 
 window.onload = () => {
-	console.log("INIT");
-	const links = document.querySelectorAll('.page-link');
-  const anchors = document.querySelectorAll('.page-anchor');
+  console.log("INIT");
+  const links = document.querySelectorAll(".page-link");
+  const anchors = document.querySelectorAll(".page-anchor");
 
   links.forEach((link) => {
-    link.addEventListener("click", e => {
+    link.addEventListener("click", (e) => {
       let target = e.target.href;
       e.preventDefault();
       intro.classList.remove("end");
       mobmenu.classList.remove("show");
       setTimeout(() => {
         window.location.href = target;
-      }, 500)
-    })
-  })
-
+      }, 500);
+    });
+  });
 
   anchors.forEach((anchor) => {
-    anchor.addEventListener("click", e => {
+    anchor.addEventListener("click", (e) => {
       e.preventDefault();
-      const urlArray = e.target.href.split('/')
-      const url = urlArray[urlArray.length-1]
-      document.querySelector(url).scrollIntoView({
-        behavior: 'smooth'
-      })
-    })
-  })
+      const urlArray = e.target.href.split("#");
+      const url = urlArray[urlArray.length - 1];
+      document.querySelector(`#${url}`).scrollIntoView({
+        behavior: "smooth",
+      });
+    });
+  });
 
-	setTimeout(() => {
+  setTimeout(() => {
     intro.classList.add("end");
-    mobmenu.classList.add("show")
-  }, 500)
-}
+    mobmenu.classList.add("show");
+  }, 500);
+};
 
 class MobileNav {
   constructor(mobileMenu, navList, navLinks) {
@@ -52,23 +51,23 @@ class MobileNav {
       link.style.animation
         ? (link.style.animation = "")
         : (link.style.animation = `navLinkFade 0.5s ease forwards 0.3s`);
-    })
+    });
   }
 
   handleClick(evt) {
-    if (evt.currentTarget.innerText != 'Home') {
+    if (evt.currentTarget.innerText != "Home") {
       this.navList.classList.toggle(this.activeClass);
       this.animateLinks();
       this.mobileMenu.classList.toggle(this.activeClass);
     }
   }
-  
+
   showElement(evt) {
-    const className = evt.currentTarget.innerText.toLowerCase()
-    console.log(className)
+    const className = evt.currentTarget.innerText.toLowerCase();
+    console.log(className);
     // const page = document.querySelector(".about");
     // page.classList.remove("active");
-    document.querySelector("."+className).classList.add("active")
+    document.querySelector("." + className).classList.add("active");
   }
 
   addClickEvent() {
@@ -87,10 +86,6 @@ class MobileNav {
   }
 }
 
-const mobileNav = new MobileNav(
-  ".mobile-menu",
-  ".nav-list",
-  ".nav-list li",
-);
+const mobileNav = new MobileNav(".mobile-menu", ".nav-list", ".nav-list li");
 
 mobileNav.init();
