@@ -1,3 +1,0 @@
-# Me
-
-My personal website
