@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - new
+    paths-ignore:
+      - '**/README.md'
 
 jobs:
   deploy:
