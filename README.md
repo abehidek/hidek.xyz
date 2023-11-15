@@ -3,6 +3,9 @@
 My personal website
 
 ## Definitions
+- fully dark mode
+- same font for everything
+- content > features
 
 ## Ideas
 - do some security stuff (paraxia.io) to not explore app
