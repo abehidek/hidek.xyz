@@ -7,6 +7,7 @@
   ];
 
   languages = {
+    c.enable = true;
     elixir = {
       enable = true;
     };
