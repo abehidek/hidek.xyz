@@ -3,6 +3,7 @@
 {
   packages = with pkgs; [
     inotify-tools
+    flyctl
   ];
 
   languages = {
