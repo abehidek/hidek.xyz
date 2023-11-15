@@ -21,9 +21,12 @@ defmodule HidekXyzWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", HidekXyzWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", HidekXyzWeb do
+    pipe_through :api
+
+    get "/", ExampleController, :index
+    post "/", ExampleController, :create
+  end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development
   if Application.compile_env(:hidek_xyz, :dev_routes) do
