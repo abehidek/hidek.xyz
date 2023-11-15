@@ -7,6 +7,8 @@ defmodule HidekXyz.Application do
 
   @impl true
   def start(_type, _args) do
+    HidekXyz.Release.migrate()
+
     children = [
       HidekXyzWeb.Telemetry,
       HidekXyz.Repo,
