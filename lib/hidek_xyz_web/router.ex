@@ -18,6 +18,8 @@ defmodule HidekXyzWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    live "/content", Content.IndexLive, :index
+    live "/content/:slug", Content.ShowLive, :show
   end
 
   # Other scopes may use custom stacks.

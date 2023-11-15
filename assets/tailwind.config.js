@@ -9,7 +9,8 @@ module.exports = {
   content: [
     "./js/**/*.js",
     "../lib/hidek_xyz_web.ex",
-    "../lib/hidek_xyz_web/**/*.*ex"
+    "../lib/hidek_xyz_web/**/*.*ex",
+    "../priv/content/**/*.md"
   ],
   theme: {
     extend: {

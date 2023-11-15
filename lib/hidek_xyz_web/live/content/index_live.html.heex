@@ -1,0 +1,14 @@
+<main class="container mx-auto py-8">
+  <p class="font-bold text-3xl mb-4">Content</p>
+  <ul>
+    <%= for article <- @articles do %>
+      <li class="border mb-4">
+        <.link class="block p-6" navigate={~p"/content/#{article.slug}"}>
+          <p class="text-xl font-bold"><%= article.title %></p>
+          <h3><%= article.title %></h3>
+          <p><%= article.publish_date %></p>
+        </.link>
+      </li>
+    <% end %>
+  </ul>
+</main>
