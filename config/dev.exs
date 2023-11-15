@@ -55,7 +55,8 @@ config :hidek_xyz, HidekXyzWeb.Endpoint,
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/hidek_xyz_web/(controllers|live|components)/.*(ex|heex)$"
+      ~r"lib/hidek_xyz_web/(controllers|live|components)/.*(ex|heex)$",
+      ~r"priv/content/*/.*(md)$"
     ]
   ]
 
