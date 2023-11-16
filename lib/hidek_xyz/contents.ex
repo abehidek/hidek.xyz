@@ -3,7 +3,7 @@ defmodule HidekXyz.Contents do
 
   use NimblePublisher,
     build: Article,
-    from: "content/**/*.md",
+    from: Application.app_dir(:hidek_xyz, "priv/content/**/*.md"),
     as: :articles
 
   @articles Enum.sort_by(@articles, & &1.publish_date, {:desc, Date})

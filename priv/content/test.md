@@ -23,7 +23,7 @@ const a = 20;
 
 <br>
 
-![phoenix](/content/media/logo.svg)
+![phoenix](/priv/content/media/logo.svg)
 
 <hello-world></hello-world>
 
