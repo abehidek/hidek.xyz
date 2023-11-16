@@ -6,6 +6,7 @@ My personal website
 - fully dark mode
 - same font for everything
 - content > features
+- each publication is an article, which are defined in the /content folder
 
 ## Ideas
 - do some security stuff (paraxia.io) to not explore app
