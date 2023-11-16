@@ -3,7 +3,7 @@ defmodule HidekXyz.Contents do
 
   use NimblePublisher,
     build: Article,
-    from: Application.app_dir(:hidek_xyz, "priv/content/**/*.md"),
+    from: "content/**/*.md",
     as: :articles,
     highlighters: [:markup_elixir, :markup_erlang]
 
