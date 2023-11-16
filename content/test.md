@@ -23,6 +23,8 @@ const a = 20;
 
 <br>
 
+![phoenix](/content/media/logo.svg)
+
 <hello-world></hello-world>
 
 <button class="text-white font-bold bg-purple-700 rounded px-5 py-3" onclick="test()">Alert!</button>

@@ -23,6 +23,12 @@ defmodule HidekXyzWeb.Endpoint do
     gzip: false,
     only: HidekXyzWeb.static_paths()
 
+  # media content from articles
+  plug Plug.Static,
+    at: "/content/media",
+    from: "content/media",
+    gzip: false
+
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
   if code_reloading? do
