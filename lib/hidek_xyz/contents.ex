@@ -4,8 +4,7 @@ defmodule HidekXyz.Contents do
   use NimblePublisher,
     build: Article,
     from: "content/**/*.md",
-    as: :articles,
-    highlighters: [:makeup_elixir, :makeup_erlang]
+    as: :articles
 
   @articles Enum.sort_by(@articles, & &1.publish_date, {:desc, Date})
 
