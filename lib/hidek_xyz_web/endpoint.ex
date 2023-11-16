@@ -26,7 +26,7 @@ defmodule HidekXyzWeb.Endpoint do
   # media content from articles
   plug Plug.Static,
     at: "/content/media",
-    from: "content/media",
+    from: {:hidek_xyz, "/content/media"},
     gzip: false
 
   # Code reloading can be explicitly enabled under the
