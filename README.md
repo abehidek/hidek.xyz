@@ -13,3 +13,4 @@ My personal website
 - add liveview components such as like, view count, presence
 - mdx or web-components inside content articles
 - rss.xml generated automatically
+- use turso as sqlite db and change deploy from fly.io to another host plataform (for better speed)
