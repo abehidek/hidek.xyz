@@ -1,6 +1,16 @@
 <main>
   <h1 class="font-bold text-3xl mb-2"><%= @article.title %></h1>
-  <p class="mb-4"><%= @article.publish_date %></p>
+  <p class="mb-2"><%= @article.publish_date %></p>
+
+  <div class="flex gap-2 mb-4">
+    <%= for tag <- @article.tags do %>
+      <div class="flex ">
+        <.link class="bg-gray-200 rounded-full px-3 py-1 text-sm text-gray-700" navigate={~p"/content?#{%{tag: tag}}"}>
+          <%= tag %>
+        </.link>
+      </div>
+    <% end %>
+  </div>
 
   <div><%= raw(@article.body) %></div>
 </main>

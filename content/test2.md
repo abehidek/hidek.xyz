@@ -1,6 +1,7 @@
 %{
   title: "second article",
-  publish_date: "2023-11-12"
+  publish_date: "2023-11-12",
+  tags: ["test", "js"]
 }
 ---
 
