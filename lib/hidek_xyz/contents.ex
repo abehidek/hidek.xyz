@@ -13,9 +13,9 @@ defmodule HidekXyz.Contents do
     defexception [:message, plug_status: 404]
   end
 
-  def all_posts, do: @articles
+  def all_articles, do: @articles
 
-  def get_post_by_slug!(slug) when is_binary(slug) do
-    Enum.find(all_posts(), &(&1.slug == slug)) || raise NotFoundError, "post with slug=#{slug} not found"
+  def get_article_by_slug!(slug) when is_binary(slug) do
+    Enum.find(all_articles(), &(&1.slug == slug)) || raise NotFoundError, "article with slug=#{slug} not found"
   end
 end

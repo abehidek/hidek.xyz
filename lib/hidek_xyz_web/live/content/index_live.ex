@@ -5,7 +5,7 @@ defmodule HidekXyzWeb.Content.IndexLive do
 
   @impl true
   def mount(_params, _session, socket) do
-    articles = Contents.all_posts()
+    articles = Contents.all_articles()
 
     {:ok, assign(socket, articles: articles)}
   end

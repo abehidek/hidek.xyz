@@ -5,7 +5,7 @@ defmodule HidekXyzWeb.Content.ShowLive do
 
   @impl true
   def mount(%{"slug" => slug}, _session, socket) do
-    article = Contents.get_post_by_slug!(slug)
+    article = Contents.get_article_by_slug!(slug)
 
     {:ok, assign(socket, article: article)}
   end

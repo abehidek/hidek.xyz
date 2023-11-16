@@ -4,7 +4,7 @@
 }
 ---
 
-this post is a test...
+this article is a test...
 
 <br>
 
