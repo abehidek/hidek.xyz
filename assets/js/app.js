@@ -24,7 +24,7 @@ import topbar from "../vendor/topbar"
 import hljs from "highlight.js"
 
 window.test = () => {
-  console.log("test 2")
+  alert("test 2")
 }
 
 window.addEventListener("phx:page-loading-stop", _ => {

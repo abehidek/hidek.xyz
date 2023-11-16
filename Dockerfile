@@ -21,8 +21,16 @@ ARG RUNNER_IMAGE="debian:${DEBIAN_VERSION}"
 FROM ${BUILDER_IMAGE} as builder
 
 # install build dependencies
-RUN apt-get update -y && apt-get install -y build-essential git \
+RUN apt-get update -y && apt-get install -y build-essential curl gnupg git \
     && apt-get clean && rm -f /var/lib/apt/lists/*_*
+
+RUN mkdir -p /etc/apt/keyrings
+
+RUN curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+
+RUN echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_18.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list
+
+RUN apt-get update -y && apt-get install -y nodejs
 
 # prepare build dir
 WORKDIR /app
@@ -52,6 +60,9 @@ COPY content content
 COPY lib lib
 
 COPY assets assets
+
+# install js deps
+RUN npm ci --prefix ./assets
 
 # compile assets
 RUN mix assets.deploy
