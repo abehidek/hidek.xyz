@@ -1,6 +1,6 @@
 defmodule HidekXyz.Article do
-  @enforce_keys [:slug, :title, :body, :publish_date, :tags]
-  defstruct [:slug, :title, :body, :publish_date, :tags]
+  @enforce_keys [:slug, :title, :description, :body, :publish_date, :tags, :cover]
+  defstruct [:slug, :title, :description, :body, :publish_date, :tags, :cover]
 
   def build(filename, attrs, body) do
     slug = Path.basename(filename, ".md")
@@ -10,9 +10,11 @@ defmodule HidekXyz.Article do
     struct!(__MODULE__,
       slug: slug,
       title: attrs.title,
+      description: attrs.description,
       body: body,
       publish_date: publish_date,
-      tags: attrs.tags
+      tags: attrs.tags,
+      cover: attrs.cover
     )
   end
 end

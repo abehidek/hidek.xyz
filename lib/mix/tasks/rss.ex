@@ -10,10 +10,15 @@ defmodule Mix.Tasks.Rss do
     |> Enum.join()
     |> IO.inspect()
 
+    host = get_host_url()
+
     document = """
     <?xml version="1.0" encoding="UTF-8" ?>
-    <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <rss version="2.0">
       <channel>
+        <title>Guilherme Hidek Abe</title>
+        <description>Findings about software engineering, computer science, infra, self-hosting, FOSS and functional programming</description>
+        <link>#{host}</link>
         #{items}
       </channel>
     </rss>
@@ -22,21 +27,26 @@ defmodule Mix.Tasks.Rss do
     File.write(@destination, document)
   end
 
-  defp link_xml(%HidekXyz.Article{} = article) do
-    host = case System.get_env("PHX_HOST") do
+  defp get_host_url do
+    case System.get_env("PHX_HOST") do
       nil -> "http://localhost:4000"
       host -> "https://#{host}"
     end
+  end
+
+  defp link_xml(%HidekXyz.Article{} = article) do
+    host = get_host_url()
 
     link = "#{host}/content/#{article.slug}"
 
     """
     <item>
       <title>#{article.title}</title>
-      <description>#{article.title}</description>
-      <pubDate>#{Calendar.strftime(article.publish_date, "%a, %d %B %Y 00:00:00 +0000")}</pubDate>
+      <description>#{article.description}</description>
+      <pubDate>#{Calendar.strftime(article.publish_date, "%a, %d %B %Y 00:00:00 GMT")}</pubDate>
       <link>#{link}</link>
       <guid isPermaLink="true">#{link}</guid>
+      <enclosure url="#{host}/#{article.cover}" length="1" type="img"/>
     </item>
     """
   end

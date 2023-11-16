@@ -1,7 +1,9 @@
 %{
   title: "test article",
+  description: "test article description",
   publish_date: "2023-11-15",
-  tags: ["test", "elixir"]
+  tags: ["test", "elixir"],
+  cover: "/priv/content/media/arch.png"
 }
 ---
 
