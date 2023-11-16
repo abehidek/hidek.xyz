@@ -5,7 +5,7 @@ defmodule HidekXyz.Contents do
     build: Article,
     from: "content/**/*.md",
     as: :articles,
-    highlighters: [:markup_elixir, :markup_erlang]
+    highlighters: [:makeup_elixir, :makeup_erlang]
 
   @articles Enum.sort_by(@articles, &(&1.publish_date), {:desc, Date})
 

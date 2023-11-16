@@ -6,6 +6,15 @@
 
 this article is a test...
 
+
+```elixir
+value = 20
+
+value
+|> &(&1 + &2)(30)
+|> IO.inspect()
+```
+
 <br>
 
 <hello-world></hello-world>
