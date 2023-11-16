@@ -28,7 +28,7 @@ defmodule Mix.Tasks.Rss do
       host -> "https://#{host}"
     end
 
-    link = "#{host}/contents/#{article.slug}"
+    link = "#{host}/content/#{article.slug}"
 
     """
     <item>
