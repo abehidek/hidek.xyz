@@ -46,7 +46,7 @@ defmodule Mix.Tasks.Rss do
       <pubDate>#{Calendar.strftime(article.publish_date, "%a, %d %B %Y 00:00:00 GMT")}</pubDate>
       <link>#{link}</link>
       <guid isPermaLink="true">#{link}</guid>
-      <enclosure url="#{host}/#{article.cover}" length="1" type="img"/>
+      <enclosure url="#{host}#{article.cover}" length="1" type="img"/>
     </item>
     """
   end
