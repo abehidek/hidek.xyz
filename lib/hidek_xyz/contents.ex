@@ -12,6 +12,7 @@ defmodule HidekXyz.Contents do
     defexception [:message, plug_status: 404]
   end
 
+  @spec all_articles() :: [%Article{}]
   def all_articles, do: @articles
 
   def get_article_by_slug!(slug) when is_binary(slug) do
