@@ -14,3 +14,6 @@ My personal website
 - mdx or web-components inside content articles
 - rss.xml generated automatically
 - use turso as sqlite db and change deploy from fly.io to another host plataform (for better speed)
+- japanese ideagram seems cool to add
+- embbed 3D model using blender? and three.js
+- blurred image placeholder?
