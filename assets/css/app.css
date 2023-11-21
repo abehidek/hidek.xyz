@@ -1,7 +1,27 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-@import "highlight.js/styles/base16/solarized-dark.css"
+@import "highlight.js/styles/base16/solarized-dark.css";
 
 /* This file is for your main application CSS */
 
+.article-body a {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
+
+.article-body h2 {
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.article-body ul li {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.article-body ol li {
+  list-style-type: decimal;
+  list-style-position: inside;
+}

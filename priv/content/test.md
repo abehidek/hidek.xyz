@@ -8,7 +8,21 @@
 }
 ---
 
+## This should be a h2?
+
 this article is a test...
+
+List
+- Sun
+- Earth
+- Mars
+- Saturn
+
+Another numbered list
+
+1. Do this
+2. And that
+3. Finally this
 
 ```elixir
 value = 20
