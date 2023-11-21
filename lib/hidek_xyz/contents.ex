@@ -6,7 +6,7 @@ defmodule HidekXyz.Contents do
     from: Application.app_dir(:hidek_xyz, "priv/content/**/*.md"),
     as: :articles
 
-  @articles Enum.sort_by(@articles, & &1.publish_date, {:desc, Date})
+  @articles @articles |> Enum.filter(& &1.public) |> Enum.sort_by(& &1.publish_date, {:desc, Date})
 
   defmodule NotFoundError do
     defexception [:message, plug_status: 404]
