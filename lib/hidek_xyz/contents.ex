@@ -15,6 +15,7 @@ defmodule HidekXyz.Contents do
   @spec all_articles() :: [%Article{}]
   def all_articles, do: @articles
 
+  @spec get_article_by_slug!(String.t()) :: %Article{}
   def get_article_by_slug!(slug) when is_binary(slug) do
     Enum.find(all_articles(), &(&1.slug == slug)) ||
       raise NotFoundError, "article with slug=#{slug} not found"
