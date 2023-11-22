@@ -11,6 +11,10 @@ My personal website
 ## Ideas
 
 ### feats:
+- use liveview for page transition (smooth)
+- create pers design system for all my side projects (including this one)
+  - penpot or quant-ux?
+  - similar to shadcn/ui but for phx?
 - do some security stuff (paraxia.io) to not explore app
 - add liveview components such as like, view count, presence
 - mdx or web-components inside content articles
