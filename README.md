@@ -22,6 +22,19 @@ My personal website
 - use rustler with rust functions for better parsing of markdown
 - use rust for parsing MDX into HTML + JS
 - convert obsidian vault into pages
+- hidek pronunciation using IPA (International Phonetic Alphabet)
+- fav music/movie/books
+- my gear page
+- resume: my cv and job history
+- receive crypto page
+- signal boost (friends and people looking for job)
+- my self hosted stuff
+- projects page
+- live components
+  - what I'm currently working on
+  - what I'm hearing
+  - home server status
+  - website status (number of req/s, commit, build info and other monitoring stuff)
 
 ### content:
 - first principles thinking
