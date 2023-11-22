@@ -19,6 +19,7 @@ My personal website
 - japanese ideagram seems cool to add
 - embbed 3D model using blender? and three.js
 - blurred image placeholder?
+- use rustler with rust functions for better parsing of markdown
 
 ### content:
 - first principles thinking
