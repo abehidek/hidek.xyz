@@ -17,7 +17,7 @@ defmodule HidekXyzWeb.Router do
   scope "/", HidekXyzWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    live "/", IndexLive, :index
     live "/content", Content.IndexLive, :index
     live "/content/:slug", Content.ShowLive, :show
   end
