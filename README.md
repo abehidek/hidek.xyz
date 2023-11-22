@@ -20,6 +20,8 @@ My personal website
 - embbed 3D model using blender? and three.js
 - blurred image placeholder?
 - use rustler with rust functions for better parsing of markdown
+- use rust for parsing MDX into HTML + JS
+- convert obsidian vault into pages
 
 ### content:
 - first principles thinking
