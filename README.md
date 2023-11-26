@@ -12,6 +12,7 @@ My personal website
 
 ### feats:
 - use liveview for page transition (smooth)
+  - [Improve UX With Liveview Page Transitions](https://alembic.com.au/blog/improve-ux-with-liveview-page-transitions)
 - create pers design system for all my side projects (including this one)
   - penpot or quant-ux?
   - similar to shadcn/ui but for phx?
