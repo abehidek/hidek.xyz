@@ -52,7 +52,7 @@ defmodule HidekXyzWeb do
   def live_view do
     quote do
       use Phoenix.LiveView,
-        layout: {HidekXyzWeb.Layouts, :app}
+        layout: {HidekXyzWeb.Layouts, :live}
 
       unquote(html_helpers())
     end

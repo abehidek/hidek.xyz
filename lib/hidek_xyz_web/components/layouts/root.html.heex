@@ -4,14 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="csrf-token" content={get_csrf_token()} />
-    <.live_title suffix=" · Phoenix Framework">
-      <%= assigns[:page_title] || "hidek.xyz" %>
+    <.live_title suffix=" · hidek.xyz">
+      <%= assigns[:page_title] || "Page" %>
     </.live_title>
     <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
     <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
     </script>
   </head>
-  <body class="bg-white antialiased">
+  <body class="bg-[#101414] text-white antialiased mx-auto max-w-2xl px-4 py-6 sm:px-6 lg:px-8">
     <%= @inner_content %>
   </body>
 </html>

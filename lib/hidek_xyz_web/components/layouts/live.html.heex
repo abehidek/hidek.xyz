@@ -1,0 +1,25 @@
+<header class="bg-gray-800 py-2 px-3 rounded-sm flex flex-wrap flex-row gap-4 items-center justify-start">
+  <h1 class="font-bold">
+    <.link navigate={~p"/"}>
+      hidek.xyz
+    </.link>
+  </h1>
+  <p>
+    <.link navigate={~p"/content"}>
+      content
+    </.link>
+  </p>
+</header>
+<main>
+  <div class="mt-4">
+    <.flash_group flash={@flash} />
+    <%= @inner_content %>
+  </div>
+  <div class="mt-4">
+    <.live_component
+      module={HidekXyzWeb.Live.ExampleComponent}
+      id="example"
+      content="Liveview Example Counter:"
+    />
+  </div>
+</main>
