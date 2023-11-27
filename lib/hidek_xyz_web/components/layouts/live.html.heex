@@ -16,10 +16,17 @@
     <%= @inner_content %>
   </div>
   <div class="mt-4">
+    <%= live_render(@socket, HidekXyzWeb.CounterLive,
+      sticky: true,
+      id: "counter_component",
+      session: %{"content" => "Liveview Counter"}
+    ) %>
+  </div>
+  <div class="mt-4">
     <.live_component
       module={HidekXyzWeb.Live.ExampleComponent}
       id="example"
-      content="Liveview Example Counter:"
+      content="LiveComponent Counter:"
     />
   </div>
 </main>
