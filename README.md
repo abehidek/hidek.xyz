@@ -54,6 +54,10 @@ My personal website
 - how I build this blog (nimblepublisher)
 - using elixir for simplifying infra
 - self-hosting stuff
+  - disclaimers about self-hosting
+  - tunneling and how to properly expose your self-hosted service
+  - network basics for self-hosting
+  - why you should replace your ISP router
 - show your work!
 - elixir future on dx
 - opinions on economics/finance
@@ -62,7 +66,4 @@ My personal website
 - why type systems are important
 - microservice, nosql and etc...
 - obsidian for knowledge management
-- tunneling and how to properly expose your self-hosted service
-- network basics for self-hosting
-- why you should replace your ISP router
 - re: [email vs capitalism, or, Why we can't have nice things](https://www.youtube.com/watch?v=mrGfahzt-4Q&t=11s)
