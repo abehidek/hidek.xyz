@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@fontsource/zen-kaku-gothic-new": "^5.0.16",
     "highlight.js": "^11.9.0"
   }
 }

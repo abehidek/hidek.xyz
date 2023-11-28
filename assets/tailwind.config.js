@@ -4,7 +4,9 @@
 const plugin = require("tailwindcss/plugin")
 const fs = require("fs")
 const path = require("path")
+const defaultTheme = require("tailwindcss/defaultTheme")
 
+/** @type {import("tailwindcss").Config} */
 module.exports = {
   content: [
     "./js/**/*.js",
@@ -14,6 +16,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Zen Kaku Gothic New", ...defaultTheme.fontFamily.sans]
+      },
       colors: {
         brand: "#FD4F00",
       }

@@ -10,7 +10,8 @@ defmodule HidekXyzWeb.IndexLive do
   def render(assigns) do
     ~H"""
     <div>
-      <h1 class="font-bold text-3xl mb-4">Abe Guilherme Hidek</h1>
+      <h1 class="font-black text-3xl mb-4">Abe Guilherme Hidek</h1>
+      <p>あべ</p>
       <p>
         A generalist working for software development, days off experimenting things with elixir, rust and self-hosting.
       </p>
