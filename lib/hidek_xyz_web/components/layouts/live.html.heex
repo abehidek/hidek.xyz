@@ -1,4 +1,4 @@
-<header class="bg-gray-800 py-2 px-3 rounded-sm flex flex-wrap flex-row gap-4 items-center justify-start">
+<header class="flex flex-wrap flex-row gap-4 items-center justify-start">
   <h1 class="font-bold">
     <.link navigate={~p"/"}>
       hidek.xyz
@@ -10,23 +10,28 @@
     </.link>
   </p>
 </header>
+<hr />
 <main>
-  <div class="mt-4">
+  <div class="mt-12">
     <.flash_group flash={@flash} />
     <%= @inner_content %>
   </div>
-  <div class="mt-4">
-    <%= live_render(@socket, HidekXyzWeb.CounterLive,
-      sticky: true,
-      id: "counter_component",
-      session: %{"content" => "Liveview Counter"}
-    ) %>
-  </div>
-  <div class="mt-4">
-    <.live_component
-      module={HidekXyzWeb.Live.ExampleComponent}
-      id="example"
-      content="LiveComponent Counter:"
-    />
+
+  <div class="mt-8">
+    <h2 class="font-semibold text-xl">Liveview stuff here for testing</h2>
+    <div class="mt-4">
+      <%= live_render(@socket, HidekXyzWeb.CounterLive,
+        sticky: true,
+        id: "counter_component",
+        session: %{"content" => "Liveview Counter"}
+      ) %>
+    </div>
+    <div class="mt-4">
+      <.live_component
+        module={HidekXyzWeb.Live.ExampleComponent}
+        id="example"
+        content="LiveComponent Counter:"
+      />
+    </div>
   </div>
 </main>
