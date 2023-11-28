@@ -22,7 +22,6 @@ import {Socket} from "phoenix"
 import {LiveSocket} from "phoenix_live_view"
 import topbar from "../vendor/topbar"
 import hljs from "highlight.js"
-import "@fontsource/zen-kaku-gothic-new/index.css"
 
 window.test = () => {
   alert("test 2")
