@@ -1,11 +1,8 @@
 name: Fly Deploy
+
 on:
   workflow_dispatch:
   push:
-    branches:
-      - new
-    paths-ignore:
-      - 'README.md'
 
 jobs:
   deploy:
