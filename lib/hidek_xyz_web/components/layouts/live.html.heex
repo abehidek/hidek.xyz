@@ -1,14 +1,17 @@
-<header class="flex flex-wrap flex-row gap-4 items-center justify-start text-2xl">
-  <h1 class="font-bold">
+<header class="flex flex-wrap flex-row items-center justify-between text-xl py-2">
+  <h1 class="font-bold text-2xl">
     <.link navigate={~p"/"}>
       hidek.xyz
     </.link>
   </h1>
-  <p>
-    <.link navigate={~p"/content"}>
-      content
-    </.link>
-  </p>
+  <div class="flex flex-wrap flex-row gap-4">
+    <p>
+      <.link navigate={~p"/content"}>
+        content
+      </.link>
+    </p>
+    <a href="https://github.com/abehidek" target="_blank" rel="noreferrer">github</a>
+  </div>
 </header>
 <hr />
 <main>
