@@ -2,6 +2,7 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 @import "highlight.js/styles/base16/solarized-dark.css";
+@import "@fontsource/zen-kaku-gothic-new/index.css";
 
 /* This file is for your main application CSS */
 
