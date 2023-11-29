@@ -1,12 +1,14 @@
 defmodule HidekXyz.Contents do
-  alias HidekXyz.Article
+  alias HidekXyz.Content.Article
 
   use NimblePublisher,
     build: Article,
     from: Application.app_dir(:hidek_xyz, "priv/content/**/*.md"),
     as: :articles
 
-  @articles @articles |> Enum.filter(& &1.public) |> Enum.sort_by(& &1.publish_date, {:desc, Date})
+  @articles @articles
+            |> Enum.filter(& &1.public)
+            |> Enum.sort_by(& &1.publish_date, {:desc, Date})
 
   defmodule NotFoundError do
     defexception [:message, plug_status: 404]

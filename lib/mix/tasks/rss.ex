@@ -1,14 +1,17 @@
 defmodule Mix.Tasks.Rss do
   use Mix.Task
 
+  alias HidekXyz.Content.Article
+
   @destination "priv/static/rss.xml"
 
   @impl Mix.Task
   def run(_args) do
-    items = HidekXyz.Contents.all_articles()
-    |> Enum.map(&link_xml/1)
-    |> Enum.join()
-    |> IO.inspect()
+    items =
+      HidekXyz.Contents.all_articles()
+      |> Enum.map(&link_xml/1)
+      |> Enum.join()
+      |> IO.inspect()
 
     host = get_host_url()
 
@@ -34,7 +37,7 @@ defmodule Mix.Tasks.Rss do
     end
   end
 
-  defp link_xml(%HidekXyz.Article{} = article) do
+  defp link_xml(%Article{} = article) do
     host = get_host_url()
 
     link = "#{host}/content/#{article.slug}"

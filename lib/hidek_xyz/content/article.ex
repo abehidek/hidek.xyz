@@ -1,4 +1,4 @@
-defmodule HidekXyz.Article do
+defmodule HidekXyz.Content.Article do
   @enforce_keys [:slug, :title, :description, :body, :publish_date, :tags, :public]
   @optional_keys [:cover]
 
