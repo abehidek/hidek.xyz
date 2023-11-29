@@ -7,7 +7,7 @@
 
 .article-body a {
   cursor: pointer;
-  color: blue;
+  font-weight: bold;
   text-decoration: underline;
 }
 
