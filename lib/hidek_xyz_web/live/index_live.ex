@@ -3,7 +3,7 @@ defmodule HidekXyzWeb.IndexLive do
 
   @impl true
   def mount(_params, _session, socket) do
-    {:ok, socket}
+    {:ok, socket |> assign(page_title: "/hidek.xyz")}
   end
 
   @impl true
@@ -25,7 +25,7 @@ defmodule HidekXyzWeb.IndexLive do
         </div>
         <div class="w-full">
           <img
-            class="w-full bg-gray-950"
+            class="w-full bg-gray-950 p-20"
             src="https://raw.githubusercontent.com/abehidek/abehidek/main/assets/logo%203%20inverted.svg"
             alt="logo"
           />
