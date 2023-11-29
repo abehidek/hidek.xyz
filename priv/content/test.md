@@ -4,7 +4,7 @@
   publish_date: "2023-11-15",
   tags: ["test", "elixir"],
   cover: "/priv/content/media/arch.png",
-  public: true
+  public: false
 }
 ---
 

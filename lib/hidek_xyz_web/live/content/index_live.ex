@@ -23,7 +23,7 @@ defmodule HidekXyzWeb.Content.IndexLive do
     <content class="container mx-auto py-8">
       <%= if is_nil(@tag) do %>
         <div>
-          <h1 class="font-bold text-3xl mb-4">Latest articles</h1>
+          <h1 class="font-bold text-4xl mb-4">Latest articles</h1>
         </div>
       <% else %>
         <div class="flex justify-between items-center mb-4">
@@ -36,30 +36,34 @@ defmodule HidekXyzWeb.Content.IndexLive do
           </.link>
         </div>
       <% end %>
-      <ul>
-        <%= for article <- @articles do %>
-          <li class="mb-4 relative">
-            <.link class="block" navigate={~p"/content/#{article.slug}"}>
-              <img class="rounded mb-2" src={article.cover} alt={"#{article.title}'s cover image"} />
-              <p class="text-xl font-bold"><%= article.title %></p>
-              <h3><%= article.description %></h3>
-              <p><%= article.publish_date %></p>
-            </.link>
-            <div class="absolute w-full top-0 flex flex-wrap gap-2 p-1">
-              <div class="flex flex-wrap bg-black bg-opacity-10 rounded-xl p-3 gap-3">
-                <%= for tag <- article.tags do %>
-                  <div class="flex flex-wrap">
-                    <.link
-                      class="bg-gray-200 rounded-xl px-3 py-1 text-sm text-gray-700"
-                      navigate={~p"/content?#{%{tag: tag}}"}
-                    >
-                      <%= tag %>
-                    </.link>
-                  </div>
-                <% end %>
-              </div>
-            </div>
-          </li>
+
+      <ul class="mt-12">
+        <%= if length(@articles) < 1 do %>
+          <h2 class="text-2xl">Oops, no articles found ¯\_(ツ)_/¯</h2>
+        <% else %>
+          <%= for article <- @articles do %>
+            <li class="mb-4 relative">
+              <.link class="block" navigate={~p"/content/#{article.slug}"}>
+                <h2 class="text-3xl font-bold"><%= article.title %></h2>
+                <h3 class="text-xl"><%= article.description %></h3>
+                <p class="text-lg"><%= article.publish_date %></p>
+              </.link>
+              <%!-- <div class="absolute w-full top-0 flex flex-wrap gap-2 p-1">
+                <div class="flex flex-wrap bg-black bg-opacity-10 rounded-xl p-3 gap-3">
+                  <%= for tag <- article.tags do %>
+                    <div class="flex flex-wrap">
+                      <.link
+                        class="bg-gray-200 rounded-xl px-3 py-1 text-sm text-gray-700"
+                        navigate={~p"/content?#{%{tag: tag}}"}
+                      >
+                        <%= tag %>
+                      </.link>
+                    </div>
+                  <% end %>
+                </div>
+              </div> --%>
+            </li>
+          <% end %>
         <% end %>
       </ul>
     </content>

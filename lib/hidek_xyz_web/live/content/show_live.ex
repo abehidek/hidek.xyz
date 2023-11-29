@@ -19,15 +19,16 @@ defmodule HidekXyzWeb.Content.ShowLive do
           Back
         </.link>
       </div>
-      <img class="rounded" src={@article.cover} alt={"#{@article.title}'s cover image"} />
-      <h1 class="font-bold text-3xl mb-2"><%= @article.title %></h1>
+
       <p class="mb-2"><%= @article.publish_date %></p>
 
-      <div class="flex gap-2 mb-4">
+      <img class="rounded mb-4" src={@article.cover} alt={"#{@article.title}'s cover image"} />
+
+      <div class="flex gap-2 mb-3">
         <%= for tag <- @article.tags do %>
           <div class="flex ">
             <.link
-              class="bg-gray-200 rounded-full px-3 py-1 text-sm text-gray-700"
+              class="bg-gray-200 rounded-full px-3 py-1 text-gray-700"
               navigate={~p"/content?#{%{tag: tag}}"}
             >
               <%= tag %>
@@ -36,7 +37,12 @@ defmodule HidekXyzWeb.Content.ShowLive do
         <% end %>
       </div>
 
-      <div class="flex flex-col gap-2 article-body"><%= raw(@article.body) %></div>
+      <h1 class="font-bold text-5xl mb-4"><%= @article.title %></h1>
+      <h2 class="text-xl mb-4"><%= @article.description %></h2>
+
+      <hr />
+
+      <div class="mt-12 flex flex-col gap-2 article-body"><%= raw(@article.body) %></div>
     </main>
     """
   end

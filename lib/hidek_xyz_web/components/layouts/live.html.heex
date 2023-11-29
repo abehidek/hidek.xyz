@@ -1,7 +1,7 @@
 <header class="flex flex-wrap flex-row items-center justify-between text-xl py-2">
   <h1 class="font-bold text-2xl">
     <.link navigate={~p"/"}>
-      hidek.xyz
+      new.hidek.xyz
     </.link>
   </h1>
   <div class="flex flex-wrap flex-row gap-4">
@@ -15,12 +15,12 @@
 </header>
 <hr />
 <main>
-  <div class="mt-12">
+  <div class="mt-24">
     <.flash_group flash={@flash} />
     <%= @inner_content %>
   </div>
 
-  <div class="mt-8">
+  <%!-- <div class="mt-8">
     <h2 class="font-semibold text-xl">Liveview stuff here for testing</h2>
     <div class="mt-4">
       <%= live_render(@socket, HidekXyzWeb.CounterLive,
@@ -36,5 +36,5 @@
         content="LiveComponent Counter:"
       />
     </div>
-  </div>
+  </div> --%>
 </main>

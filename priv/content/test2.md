@@ -4,7 +4,7 @@
   publish_date: "2023-11-12",
   tags: ["test", "js"],
   cover: "/priv/content/media/windows.jpg",
-  public: true
+  public: false
 }
 ---
 
