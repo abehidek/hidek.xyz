@@ -24,11 +24,7 @@ defmodule HidekXyzWeb.IndexLive do
           </div>
         </div>
         <div class="w-full">
-          <img
-            class="w-full bg-gray-950 p-20"
-            src="https://raw.githubusercontent.com/abehidek/abehidek/main/assets/logo%203%20inverted.svg"
-            alt="logo"
-          />
+          <img class="w-full bg-gray-950 p-20" src="/images/logo-3-inverted.svg" alt="logo" />
         </div>
       </div>
     </div>
