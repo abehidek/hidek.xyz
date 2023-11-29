@@ -22,7 +22,9 @@ defmodule HidekXyzWeb.Content.ShowLive do
 
       <p class="mb-2"><%= @article.publish_date %></p>
 
-      <img class="rounded mb-4" src={@article.cover} alt={"#{@article.title}'s cover image"} />
+      <%= if not is_nil(@article.cover) do %>
+        <img class="rounded mb-4" src={@article.cover} alt={"#{@article.title}'s cover image"} />
+      <% end %>
 
       <div class="flex gap-2 mb-3">
         <%= for tag <- @article.tags do %>
