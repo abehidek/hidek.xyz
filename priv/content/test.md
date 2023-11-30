@@ -1,11 +1,10 @@
-%{
-  title: "test article",
-  description: "test article description",
-  publish_date: "2023-11-15",
-  tags: ["test", "elixir"],
-  cover: "/priv/content/media/arch.png",
-  public: false
-}
+---
+title: "test article"
+description: "test article description"
+publish_date: "2023-11-15"
+tags: ["test", "elixir"]
+cover: "/priv/content/media/arch.png"
+public: true
 ---
 
 ## This should be a h2?

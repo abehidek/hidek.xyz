@@ -32,6 +32,10 @@ RUN echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesourc
 
 RUN apt-get update -y && apt-get install -y nodejs
 
+RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
+
+ENV PATH="/root/.cargo/bin:${PATH}"
+
 # prepare build dir
 WORKDIR /app
 
@@ -55,6 +59,8 @@ COPY config/config.exs config/${MIX_ENV}.exs config/
 RUN mix deps.compile
 
 COPY priv priv
+
+COPY native native
 
 COPY lib lib
 

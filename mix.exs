@@ -51,7 +51,9 @@ defmodule HidekXyz.MixProject do
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
       {:plug_cowboy, "~> 2.5"},
-      {:nimble_publisher, "~> 1.1"}
+      {:nimble_publisher, "~> 1.1"},
+      {:rustler, "~> 0.30.0"},
+      {:toml, "~> 0.7"}
     ]
   end
 
@@ -69,7 +71,12 @@ defmodule HidekXyz.MixProject do
       test: ["ecto.create --quiet", "ecto.migrate --quiet", "test"],
       "assets.setup": ["tailwind.install --if-missing", "esbuild.install --if-missing"],
       "assets.build": ["tailwind default", "esbuild default"],
-      "assets.deploy": ["tailwind default --minify", "esbuild default --minify", "rss", "phx.digest"]
+      "assets.deploy": [
+        "tailwind default --minify",
+        "esbuild default --minify",
+        "rss",
+        "phx.digest"
+      ]
     ]
   end
 end

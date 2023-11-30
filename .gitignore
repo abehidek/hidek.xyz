@@ -55,3 +55,7 @@ npm-debug.log
 # Database files
 *.db
 *.db-*
+
+/native/**/Cargo.lock
+/native/**/target
+/priv/native/*.so

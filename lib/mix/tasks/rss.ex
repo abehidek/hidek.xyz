@@ -44,12 +44,12 @@ defmodule Mix.Tasks.Rss do
 
     """
     <item>
-      <title>#{article.title}</title>
-      <description>#{article.description}</description>
-      <pubDate>#{Calendar.strftime(article.publish_date, "%a, %d %B %Y 00:00:00 GMT")}</pubDate>
+      <title>#{article.frontmatter.title}</title>
+      <description>#{article.frontmatter.description}</description>
+      <pubDate>#{Calendar.strftime(article.frontmatter.publish_date, "%a, %d %B %Y 00:00:00 GMT")}</pubDate>
       <link>#{link}</link>
       <guid isPermaLink="true">#{link}</guid>
-      <enclosure url="#{host}#{article.cover}" length="1" type="img"/>
+      <enclosure url="#{host}#{article.frontmatter.cover}" length="1" type="img"/>
     </item>
     """
   end

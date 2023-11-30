@@ -8,6 +8,10 @@
 
   languages = {
     c.enable = true;
+    rust = {
+      enable = true;
+      channel = "stable";
+    };
     elixir = {
       enable = true;
     };

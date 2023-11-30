@@ -1,11 +1,10 @@
-%{
-  title: "This website was created using Phoenix Liveview",
-  description: "Who said we can only build interactive, real-time web applications using liveview?",
-  publish_date: "2023-11-21",
-  tags: ["phoenix", "elixir", "liveview"],
-  cover: "",
-  public: false
-}
+---
+title: "This website was created using Phoenix Liveview"
+description: "Who said we can only build interactive, real-time web applications using liveview?"
+publish_date: "2023-11-21"
+tags: ["phoenix", "elixir", "liveview"]
+cover: ""
+public: false
 ---
 
 SSGs or Static Site Generators have been gaining popularity in the web space due to it's simplicity.

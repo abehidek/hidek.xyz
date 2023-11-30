@@ -4,11 +4,12 @@ defmodule HidekXyz.Contents do
   use NimblePublisher,
     build: Article,
     from: Application.app_dir(:hidek_xyz, "priv/content/**/*.md"),
-    as: :articles
+    as: :articles,
+    parser: HidekXyz.Content.Frontmatter
 
   @articles @articles
-            |> Enum.filter(& &1.public)
-            |> Enum.sort_by(& &1.publish_date, {:desc, Date})
+            |> Enum.filter(& &1.frontmatter.public)
+            |> Enum.sort_by(& &1.frontmatter.publish_date, {:desc, Date})
 
   defmodule NotFoundError do
     defexception [:message, plug_status: 404]
@@ -25,7 +26,7 @@ defmodule HidekXyz.Contents do
 
   def get_articles_by_tag!(tag) do
     all_articles()
-    |> Enum.filter(&(tag in &1.tags))
+    |> Enum.filter(&(tag in &1.frontmatter.tags))
     |> then(fn
       [] -> raise NotFoundError, "articles with tag=#{tag} not found"
       articles -> articles

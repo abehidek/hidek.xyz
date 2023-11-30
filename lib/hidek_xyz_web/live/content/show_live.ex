@@ -20,14 +20,18 @@ defmodule HidekXyzWeb.Content.ShowLive do
         </.link>
       </div>
 
-      <p class="mb-2"><%= @article.publish_date %></p>
+      <p class="mb-2"><%= @article.frontmatter.publish_date %></p>
 
-      <%= if not is_nil(@article.cover) do %>
-        <img class="rounded mb-4" src={@article.cover} alt={"#{@article.title}'s cover image"} />
+      <%= if not is_nil(@article.frontmatter.cover) do %>
+        <img
+          class="rounded mb-4"
+          src={@article.frontmatter.cover}
+          alt={"#{@article.frontmatter.title}'s cover image"}
+        />
       <% end %>
 
       <div class="flex gap-2 mb-3">
-        <%= for tag <- @article.tags do %>
+        <%= for tag <- @article.frontmatter.tags do %>
           <div class="flex ">
             <.link
               class="bg-gray-200 rounded-full px-3 py-1 text-gray-700"
@@ -39,8 +43,8 @@ defmodule HidekXyzWeb.Content.ShowLive do
         <% end %>
       </div>
 
-      <h1 class="font-bold text-5xl mb-4"><%= @article.title %></h1>
-      <h2 class="text-xl mb-4"><%= @article.description %></h2>
+      <h1 class="font-bold text-5xl mb-4"><%= @article.frontmatter.title %></h1>
+      <h2 class="text-xl mb-4"><%= @article.frontmatter.description %></h2>
 
       <hr />
 
