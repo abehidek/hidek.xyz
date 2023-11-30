@@ -1,11 +1,11 @@
 [package]
-name = "hidekxyz_markdown"
+name = "hidekxyz_parser"
 version = "0.1.0"
 authors = []
 edition = "2021"
 
 [lib]
-name = "hidekxyz_markdown"
+name = "hidekxyz_parser"
 path = "src/lib.rs"
 crate-type = ["cdylib"]
 

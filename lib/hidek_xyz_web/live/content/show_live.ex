@@ -13,7 +13,7 @@ defmodule HidekXyzWeb.Content.ShowLive do
   @impl true
   def render(assigns) do
     ~H"""
-    <main>
+    <article>
       <div class="mb-5">
         <.link class="font-semibold text-xl" navigate={~p"/content"}>
           Back
@@ -48,8 +48,8 @@ defmodule HidekXyzWeb.Content.ShowLive do
 
       <hr />
 
-      <div class="mt-12 flex flex-col gap-2 article-body"><%= raw(@article.body) %></div>
-    </main>
+      <div class="mt-12 flex flex-col gap-2 article-body text-lg"><%= raw(@article.body) %></div>
+    </article>
     """
   end
 end

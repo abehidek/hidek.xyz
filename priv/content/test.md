@@ -6,7 +6,6 @@ tags: ["test", "elixir"]
 cover: "/priv/content/media/arch.png"
 public: true
 ---
-
 ## This should be a h2?
 
 this article is a test...
