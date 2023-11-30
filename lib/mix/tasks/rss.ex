@@ -1,6 +1,7 @@
 defmodule Mix.Tasks.Rss do
   use Mix.Task
 
+  alias HidekXyz.Content
   alias HidekXyz.Content.Article
 
   @destination "priv/static/rss.xml"
@@ -8,7 +9,7 @@ defmodule Mix.Tasks.Rss do
   @impl Mix.Task
   def run(_args) do
     items =
-      HidekXyz.Contents.all_articles()
+      Content.all_articles()
       |> Enum.map(&link_xml/1)
       |> Enum.join()
       |> IO.inspect()

@@ -1,11 +1,11 @@
 defmodule HidekXyzWeb.Content.ShowLive do
   use HidekXyzWeb, :live_view
 
-  alias HidekXyz.Contents
+  alias HidekXyz.Content
 
   @impl true
   def mount(%{"slug" => slug}, _session, socket) do
-    article = Contents.get_article_by_slug!(slug)
+    article = Content.get_article_by_slug!(slug)
 
     {:ok, assign(socket, article: article, page_title: "#{slug}/content/hidek.xyz")}
   end

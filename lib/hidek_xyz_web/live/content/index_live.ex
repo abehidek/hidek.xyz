@@ -1,20 +1,20 @@
 defmodule HidekXyzWeb.Content.IndexLive do
   use HidekXyzWeb, :live_view
 
-  alias HidekXyz.Contents
+  alias HidekXyz.Content
 
   @page_title "content/hidek.xyz"
 
   @impl true
   def mount(%{"tag" => tag}, _session, socket) do
-    articles = Contents.get_articles_by_tag!(tag)
+    articles = Content.get_articles_by_tag!(tag)
 
     {:ok, assign(socket, articles: articles, tag: tag, page_title: @page_title)}
   end
 
   @impl true
   def mount(_params, _session, socket) do
-    articles = Contents.all_articles()
+    articles = Content.all_articles()
 
     {:ok, assign(socket, articles: articles, tag: nil, page_title: @page_title)}
   end

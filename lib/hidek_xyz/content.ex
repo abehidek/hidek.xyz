@@ -1,11 +1,11 @@
-defmodule HidekXyz.Contents do
-  alias HidekXyz.Content.Article
+defmodule HidekXyz.Content do
+  alias HidekXyz.Content.{Article, Frontmatter}
 
   use NimblePublisher,
     build: Article,
     from: Application.app_dir(:hidek_xyz, "priv/content/**/*.md"),
     as: :articles,
-    parser: HidekXyz.Content.Frontmatter
+    parser: Frontmatter
 
   @articles @articles
             |> Enum.filter(& &1.frontmatter.public)
