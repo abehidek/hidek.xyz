@@ -4,7 +4,7 @@ description: "test article description"
 publish_date: "2023-11-15"
 tags: ["test", "elixir"]
 cover: "/priv/content/media/arch.png"
-public: true
+public: false
 ---
 ## This should be a h2?
 
@@ -29,8 +29,6 @@ value
 |> &(&1 + &2)(30)
 |> IO.inspect()
 ```
-
-<br>
 
 ```js
 const a = 20;

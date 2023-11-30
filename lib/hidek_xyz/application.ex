@@ -13,8 +13,7 @@ defmodule HidekXyz.Application do
       HidekXyzWeb.Telemetry,
       HidekXyz.Repo,
       {Ecto.Migrator,
-        repos: Application.fetch_env!(:hidek_xyz, :ecto_repos),
-        skip: skip_migrations?()},
+       repos: Application.fetch_env!(:hidek_xyz, :ecto_repos), skip: skip_migrations?()},
       {DNSCluster, query: Application.get_env(:hidek_xyz, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: HidekXyz.PubSub},
       # Start the Finch HTTP client for sending emails
@@ -22,7 +21,8 @@ defmodule HidekXyz.Application do
       # Start a worker by calling: HidekXyz.Worker.start_link(arg)
       # {HidekXyz.Worker, arg},
       # Start to serve requests, typically the last entry
-      HidekXyzWeb.Endpoint
+      HidekXyzWeb.Endpoint,
+      HidekXyzWeb.Presence
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

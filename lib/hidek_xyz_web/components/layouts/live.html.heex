@@ -11,6 +11,12 @@
       </.link>
     </p>
     <a href="https://github.com/abehidek" target="_blank" rel="noreferrer">github</a>
+    <div>
+      <%= live_render(@socket, HidekXyzWeb.AppUsersLive,
+        sticky: true,
+        id: "app_users_live"
+      ) %>
+    </div>
   </div>
 </header>
 <hr />
