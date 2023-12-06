@@ -3,18 +3,23 @@ defmodule HidekXyz.Content.Frontmatter do
   alias HidekXyz.Content.Article.Frontmatter
 
   def parse(_path, contents) do
-    [_, frontmatter, body] =
-      String.split(contents, [
-        "---",
-        "\n---",
-        "\r\n---",
-        "---\n",
-        "---\r\n",
-        "\n---\n",
-        "\r\n---\r\n"
-      ])
+    [frontmatter, body] =
+      String.split(
+        contents,
+        [
+          "---",
+          "\n---",
+          "\r\n---",
+          "---\n",
+          "---\r\n",
+          "\n---\n",
+          "\r\n---\r\n"
+        ],
+        trim: true,
+        parts: 2
+      )
 
-    %Frontmatter{} = yml = Parser.parse_frontmatter(frontmatter)
+    %Frontmatter{} = yml = frontmatter |> Parser.parse_frontmatter()
 
     {yml, body}
   end

@@ -10,6 +10,7 @@ struct ArticleFrontmatter {
     tags: Vec<String>,
     public: bool,
     cover: Option<String>,
+    series: Option<String>,
 }
 
 #[rustler::nif]

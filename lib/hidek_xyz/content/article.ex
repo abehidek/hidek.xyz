@@ -6,7 +6,7 @@ defmodule HidekXyz.Content.Article do
 
   defmodule Frontmatter do
     @enforce_keys [:title, :description, :publish_date, :tags, :public]
-    @optional_keys [:cover]
+    @optional_keys [:cover, :series]
     defstruct(@enforce_keys ++ @optional_keys)
   end
 
@@ -20,6 +20,8 @@ defmodule HidekXyz.Content.Article do
 
     maybe_public = Map.get(attrs, :public)
 
+    maybe_series = Map.get(attrs, :series)
+
     struct!(__MODULE__,
       slug: slug,
       body: body,
@@ -28,11 +30,17 @@ defmodule HidekXyz.Content.Article do
         description: attrs.description,
         publish_date: publish_date,
         tags: attrs.tags,
+        series:
+          if(not is_nil(maybe_series) and maybe_series |> String.length() > 0,
+            do: maybe_series,
+            else: nil
+          ),
         cover:
           if(not is_nil(maybe_cover) and maybe_cover |> String.length() > 0,
             do: maybe_cover,
             else: nil
           ),
+        # defaults to false
         public: maybe_public || false
       }
     )

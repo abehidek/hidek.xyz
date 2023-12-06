@@ -43,6 +43,15 @@ defmodule Mix.Tasks.Rss do
 
     link = "#{host}/content/#{article.slug}"
 
+    IO.inspect(Map.get(article.frontmatter, :cover))
+
+    maybe_enclosure =
+      if nil == Map.get(article.frontmatter, :cover),
+        do: "",
+        else: """
+        <enclosure url="#{host}#{article.frontmatter.cover}" length="1" type="img"/>
+        """
+
     """
     <item>
       <title>#{article.frontmatter.title}</title>
@@ -50,7 +59,7 @@ defmodule Mix.Tasks.Rss do
       <pubDate>#{Calendar.strftime(article.frontmatter.publish_date, "%a, %d %B %Y 00:00:00 GMT")}</pubDate>
       <link>#{link}</link>
       <guid isPermaLink="true">#{link}</guid>
-      <enclosure url="#{host}#{article.frontmatter.cover}" length="1" type="img"/>
+      #{maybe_enclosure}
     </item>
     """
   end
