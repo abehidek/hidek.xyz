@@ -1,8 +1,14 @@
 defmodule HidekXyz.Content.Article do
-  alias HidekXyz.Content.Article.Frontmatter
+  alias HidekXyz.Content.Article.{Frontmatter, Series}
   @enforce_keys [:slug, :frontmatter, :body]
 
   defstruct(@enforce_keys)
+
+  defmodule Series do
+    @enforce_keys [:slug, :title, :part]
+    @optional_keys []
+    defstruct(@enforce_keys ++ @optional_keys)
+  end
 
   defmodule Frontmatter do
     @enforce_keys [:title, :description, :publish_date, :tags, :public]
@@ -31,8 +37,12 @@ defmodule HidekXyz.Content.Article do
         publish_date: publish_date,
         tags: attrs.tags,
         series:
-          if(not is_nil(maybe_series) and maybe_series |> String.length() > 0,
-            do: maybe_series,
+          if(not is_nil(maybe_series),
+            do: %Series{
+              slug: maybe_series.slug,
+              title: maybe_series.title,
+              part: maybe_series.part
+            },
             else: nil
           ),
         cover:

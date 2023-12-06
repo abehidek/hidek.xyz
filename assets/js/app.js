@@ -28,7 +28,11 @@ window.test = () => {
 }
 
 window.addEventListener("phx:page-loading-stop", _ => {
-  hljs.highlightAll()
+  // hljs.highlightAll()
+
+  document.querySelectorAll("code").forEach(el => {
+    hljs.highlightElement(el)
+  })
 })
 
 let csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute("content")

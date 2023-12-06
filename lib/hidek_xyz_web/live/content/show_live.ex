@@ -43,8 +43,16 @@ defmodule HidekXyzWeb.Content.ShowLive do
         <% end %>
       </div>
 
+      <%= if not is_nil(@article.frontmatter.series) do %>
+        <h2 class="font-semibold text-xl mb-4">
+          <%!-- <.link navigate={~p"/content?#{%{series: @article.frontmatter.series.slug}}"}> --%>
+          Series: <%= @article.frontmatter.series.title %>, part <%= @article.frontmatter.series.part %>
+          <%!-- </.link> --%>
+        </h2>
+      <% end %>
+
       <h1 class="font-bold text-5xl mb-4"><%= @article.frontmatter.title %></h1>
-      <h2 class="text-xl mb-4"><%= @article.frontmatter.description %></h2>
+      <h3 class="text-xl mb-4"><%= @article.frontmatter.description %></h3>
 
       <hr />
 

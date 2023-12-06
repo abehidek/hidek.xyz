@@ -17,8 +17,8 @@
 }
 
 .article-body h2,
-h3,
-h4 {
+.article-body h3,
+.article-body h4 {
   margin-top: 2.5rem;
   margin-bottom: 1.5rem;
 }
@@ -40,7 +40,7 @@ h4 {
 }
 
 .article-body ul,
-ol {
+.article-body ol {
   margin-bottom: 1.5rem;
 }
 
@@ -51,5 +51,19 @@ ol {
 
 .article-body ol li {
   list-style-type: decimal;
-  list-style-position: inside;
+  list-style-position: outside;
+}
+
+.article-body .twitter-tweet {
+  margin-top: 2.5rem;
+  margin-bottom: 3rem;
+  border: 2px solid white;
+  padding: 1rem;
+}
+
+.article-body img {
+  width: 60%;
+  margin: auto;
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
 }
