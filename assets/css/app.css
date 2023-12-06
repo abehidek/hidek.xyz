@@ -5,15 +5,43 @@
 
 /* This file is for your main application CSS */
 
+.article-body {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  word-wrap: break-word;
+  margin-top: 3rem;
+}
+
+.article-body p {
+  margin-bottom: 1rem;
+}
+
+.article-body h2,
+h3,
+h4 {
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.article-body h2 {
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.article-body pre {
+  margin-bottom: 1.5rem;
+  white-space: pre;
+}
+
 .article-body a {
   cursor: pointer;
   font-weight: bold;
   text-decoration: underline;
 }
 
-.article-body h2 {
-  font-weight: bold;
-  font-size: x-large;
+.article-body ul,
+ol {
+  margin-bottom: 1.5rem;
 }
 
 .article-body ul li {

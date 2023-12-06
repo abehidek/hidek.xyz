@@ -48,7 +48,7 @@ defmodule HidekXyzWeb.Content.ShowLive do
 
       <hr />
 
-      <div class="mt-12 flex flex-col gap-2 article-body text-lg"><%= raw(@article.body) %></div>
+      <div class="article-body"><%= raw(@article.body) %></div>
     </article>
     """
   end

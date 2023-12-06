@@ -45,7 +45,7 @@ defmodule HidekXyzWeb.Content.IndexLive do
         <% else %>
           <%= for article <- @articles do %>
             <li class="mb-4 relative">
-              <.link class="block" navigate={~p"/content/#{article.slug}"}>
+              <.link class="block" navigate={~p"/content/" <> article.slug}>
                 <h2 class="text-3xl font-bold"><%= article.frontmatter.title %></h2>
                 <h3 class="text-xl"><%= article.frontmatter.description %></h3>
                 <p class="text-lg"><%= article.frontmatter.publish_date %></p>
