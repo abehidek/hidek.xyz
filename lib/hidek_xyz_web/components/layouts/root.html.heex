@@ -39,8 +39,16 @@
           </div>
         </div>
         <div class="w-full flex flex-wrap justify-between text-md">
-          <p></p>
-          <p>@ 2023 - Abe Guilherme Hidek</p>
+          <p>hidek.xyz</p>
+          <p>
+            @
+            <span id="year">
+              <script>
+                document.getElementById('year').appendChild(document.createTextNode(new Date().getFullYear()))
+              </script>
+            </span>
+            - Abe Guilherme Hidek
+          </p>
         </div>
       </div>
     </footer>
