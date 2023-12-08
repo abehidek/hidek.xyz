@@ -1,3 +1,3 @@
-# Me
+# 2022.hidek.xyz
 
-My personal website
+My 2022 version personal website
