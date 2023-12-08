@@ -8,7 +8,9 @@ defmodule HidekXyz.Content do
     parser: Frontmatter
 
   @articles @articles
-            |> Enum.filter(& &1.frontmatter.public)
+            |> Enum.filter(
+              &(&1.frontmatter.public or Application.compile_env(:hidek_xyz, :dev_routes))
+            )
             |> Enum.sort_by(& &1.frontmatter.publish_date, {:desc, Date})
 
   defmodule NotFoundError do
