@@ -1,4 +1,4 @@
-# new.hidek.xyz
+# hidek.xyz
 
 My personal website
 

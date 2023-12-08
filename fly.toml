@@ -21,7 +21,7 @@ swap_size_mb = 512
 
 [env]
   DATABASE_PATH = "/data/hidek_xyz/hidek_xyz.db" # system will create/read from this file
-  PHX_HOST = "new.hidek.xyz"
+  PHX_HOST = "hidek.xyz"
   PORT = "8080"
 
 [http_service]

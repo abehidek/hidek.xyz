@@ -45,7 +45,7 @@ RUN mix local.hex --force && \
 
 # set build ENV
 ENV MIX_ENV="prod"
-ENV PHX_HOST="new.hidek.xyz"
+ENV PHX_HOST="hidek.xyz"
 
 # install mix dependencies
 COPY mix.exs mix.lock ./
