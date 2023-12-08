@@ -273,6 +273,11 @@ Basically, you'll lose the ability to put your app in a CDN and distribute it ac
 
 But in counterpoint, the Phoenix Liveview provides a easy abstraction for creating real-time experiences, next article in this series we'll create a real-time user tracking component used in this website.
 
+<hr>
+
+## Corrections:
+- Phoenix generates static assets that you can put in a CDN, and the initial page load is pure HTML, after JavaScript is loaded that the websocket channel is created and handled by the server.
+
 <!-- As of the time I'm writing this article, the web tooling is constantly evolving and passing through changes, the rise of JavaScript over the years have flooded the web space with it's frameworks such as [React](https://react.dev/), [Angular](https://angular.dev/), [Svelte]() and many others.
 
 And from that, JavaScript have started to spread on the backend as well, thus giving birth for full-stack frameworks like [Next.js](), [SvelteKit]() and others.
