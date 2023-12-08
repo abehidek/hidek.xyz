@@ -3,7 +3,7 @@ defmodule HidekXyzWeb.Content.IndexLive do
 
   alias HidekXyz.Content
 
-  @page_title "content/hidek.xyz"
+  @page_title "Content - hidek.xyz"
 
   @impl true
   def mount(%{"tag" => tag}, _session, socket) do

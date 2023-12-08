@@ -3,7 +3,7 @@ defmodule HidekXyzWeb.IndexLive do
 
   @impl true
   def mount(_params, _session, socket) do
-    {:ok, socket |> assign(page_title: "/hidek.xyz")}
+    {:ok, socket |> assign(page_title: "hidek.xyz")}
   end
 
   @impl true

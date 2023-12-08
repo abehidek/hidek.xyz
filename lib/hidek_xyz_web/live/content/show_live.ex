@@ -7,7 +7,7 @@ defmodule HidekXyzWeb.Content.ShowLive do
   def mount(%{"slug" => slug}, _session, socket) do
     article = Content.get_article_by_slug!(slug)
 
-    {:ok, assign(socket, article: article, page_title: "#{slug}/content/hidek.xyz")}
+    {:ok, assign(socket, article: article, page_title: "#{article.frontmatter.title} - hidek.xyz")}
   end
 
   @impl true
