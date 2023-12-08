@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" class="[scrollbar-gutter:stable]">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content={get_csrf_token()} />
+    <.live_title>
+      <%= assigns[:page_title] || "hidek.xyz" %>
+    </.live_title>
+    <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
+    </script>
+  </head>
+  <body class="bg-[#101414] text-white antialiased font-sans relative min-h-screen">
+    <div class="mx-auto max-w-4xl px-4 py-6 sm:px-6 lg:px-8 pb-60">
+      <%= @inner_content %>
+    </div>
+    <footer class="absolute w-full bottom-0 left-0 text-gray-300">
+      <div class="mx-auto max-w-4xl px-4 py-6 sm:px-6 lg:px-8 flex flex-col gap-2 h-full">
+        <div class="w-full flex flex-wrap justify-between text-lg">
+          <div class="flex flex-wrap gap-2">
+            <a href="https://twitter.com/guilhermehabe" target="_blank" rel="noreferrer">
+              𝕏
+            </a>
+            <a href="https://github.com/abehidek" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/guilhermehabe" target="_blank" rel="noreferrer">
+              Linkedin
+            </a>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <a href="/rss.xml">rss.xml</a>
+          </div>
+        </div>
+        <div class="w-full flex flex-wrap justify-between text-md">
+          <p></p>
+          <p>@ 2023 - Abe Guilherme Hidek</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

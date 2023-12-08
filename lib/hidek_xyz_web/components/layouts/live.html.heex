@@ -1,0 +1,48 @@
+<header class="flex flex-wrap flex-row items-center justify-between text-xl py-2">
+  <h1 class="font-bold text-xl sm:text-2xl">
+    <.link navigate={~p"/"}>
+      hidek.xyz
+    </.link>
+  </h1>
+  <div class="flex flex-wrap flex-row gap-4">
+    <p>
+      <.link navigate={~p"/content"}>
+        content
+      </.link>
+    </p>
+    <div>
+      <%= live_render(@socket, HidekXyzWeb.AppUsersLive,
+        sticky: true,
+        id: "app_users_live"
+      ) %>
+    </div>
+  </div>
+</header>
+<hr />
+<main
+  class="transition-all duration-300 motion-reduce:duration-0 opacity-0 phx-page-loading:opacity-0"
+  phx-mounted={JS.remove_class("opacity-0")}
+>
+  <div class="mt-24">
+    <.flash_group flash={@flash} />
+    <%= @inner_content %>
+  </div>
+
+  <%!-- <div class="mt-8">
+    <h2 class="font-semibold text-xl">Liveview stuff here for testing</h2>
+    <div class="mt-4">
+      <%= live_render(@socket, HidekXyzWeb.CounterLive,
+        sticky: true,
+        id: "counter_component",
+        session: %{"content" => "Liveview Counter"}
+      ) %>
+    </div>
+    <div class="mt-4">
+      <.live_component
+        module={HidekXyzWeb.Live.ExampleComponent}
+        id="example"
+        content="LiveComponent Counter:"
+      />
+    </div>
+  </div> --%>
+</main>

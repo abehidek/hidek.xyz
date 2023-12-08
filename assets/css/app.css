@@ -1,0 +1,69 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "highlight.js/styles/base16/solarized-dark.css";
+
+/* This file is for your main application CSS */
+
+.article-body {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  word-wrap: break-word;
+  margin-top: 3rem;
+}
+
+.article-body p {
+  margin-bottom: 1rem;
+}
+
+.article-body h2,
+.article-body h3,
+.article-body h4 {
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.article-body h2 {
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.article-body pre {
+  margin-bottom: 1.5rem;
+  white-space: pre;
+}
+
+.article-body a {
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.article-body ul,
+.article-body ol {
+  margin-bottom: 1.5rem;
+}
+
+.article-body ul li {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.article-body ol li {
+  list-style-type: decimal;
+  list-style-position: outside;
+}
+
+.article-body .twitter-tweet {
+  margin-top: 2.5rem;
+  margin-bottom: 3rem;
+  border: 2px solid white;
+  padding: 1rem;
+}
+
+.article-body img {
+  width: 60%;
+  margin: auto;
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+}
