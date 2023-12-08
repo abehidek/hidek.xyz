@@ -7,7 +7,8 @@ defmodule HidekXyzWeb.Content.ShowLive do
   def mount(%{"slug" => slug}, _session, socket) do
     article = Content.get_article_by_slug!(slug)
 
-    {:ok, assign(socket, article: article, page_title: "#{article.frontmatter.title} - hidek.xyz")}
+    {:ok,
+     assign(socket, article: article, page_title: "#{article.frontmatter.title} - hidek.xyz")}
   end
 
   @impl true
@@ -20,7 +21,14 @@ defmodule HidekXyzWeb.Content.ShowLive do
         </.link>
       </div>
 
-      <p class="mb-2"><%= @article.frontmatter.publish_date %></p>
+      <div class="flex justify-between">
+        <p class="mb-2"><%= @article.frontmatter.publish_date %></p>
+        <%= live_render(@socket, HidekXyzWeb.ContentUsersLive,
+          sticky: true,
+          id: "content_users_live",
+          session: %{"id" => @article.slug}
+        ) %>
+      </div>
 
       <%= if not is_nil(@article.frontmatter.cover) do %>
         <img
