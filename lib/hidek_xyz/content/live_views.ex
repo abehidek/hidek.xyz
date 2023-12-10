@@ -40,10 +40,17 @@ defmodule HidekXyz.Content.LiveViews do
       nil ->
         %View{} =
           db_content_view =
-          Repo.insert!(%View{count: 1, slug: slug}, on_conflict: [inc: [count: 1]])
+          case Repo.get_by(View, slug: slug) do
+            nil -> Repo.insert!(%View{count: 1, slug: slug})
+            %View{} = view -> view
+          end
+
+        # %View{} =
+        #   db_content_view =
+        #   Repo.insert!(%View{count: 1, slug: slug}, on_conflict: [inc: [count: 1]])
 
         new_content_view = %ContentViews{
-          count: db_content_view.count
+          count: db_content_view.count + 1
         }
 
         new_state =
