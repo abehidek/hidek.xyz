@@ -17,7 +17,6 @@ defmodule HidekXyz.Content.Article do
   end
 
   def build(filename, attrs, body) do
-    # IO.inspect(attrs, label: "Attrs")
     slug = Path.basename(filename, ".md")
 
     publish_date = Date.from_iso8601!(attrs.publish_date)

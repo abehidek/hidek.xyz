@@ -3,7 +3,6 @@ defmodule HidekXyzWeb.CounterLive do
 
   @impl true
   def mount(_params, %{"content" => content}, socket) do
-    IO.inspect(socket, label: "[CounterLive mount socket]:")
     {:ok, socket |> assign(counter: 0) |> assign(content: content), layout: false}
   end
 

@@ -8,8 +8,6 @@ defmodule HidekXyzWeb.AppUsersLive do
 
   @impl true
   def mount(_params, _session, socket) do
-    IO.inspect(socket, label: "SOcket")
-
     if connected?(socket) do
       Endpoint.subscribe(@topic)
       Presence.track(self(), @topic, UUID.generate(), %{})

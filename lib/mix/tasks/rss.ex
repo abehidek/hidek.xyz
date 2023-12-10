@@ -12,7 +12,6 @@ defmodule Mix.Tasks.Rss do
       Content.all_articles()
       |> Enum.map(&link_xml/1)
       |> Enum.join()
-      |> IO.inspect()
 
     host = get_host_url()
 
@@ -42,8 +41,6 @@ defmodule Mix.Tasks.Rss do
     host = get_host_url()
 
     link = "#{host}/content/#{article.slug}"
-
-    IO.inspect(Map.get(article.frontmatter, :cover))
 
     maybe_enclosure =
       if nil == Map.get(article.frontmatter, :cover),
