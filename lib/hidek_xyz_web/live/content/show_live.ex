@@ -24,11 +24,15 @@ defmodule HidekXyzWeb.Content.ShowLive do
       <div class="flex justify-between">
         <p class="mb-2"><%= @article.frontmatter.publish_date %></p>
         <div class="flex gap-2">
+          <p>
+            <span id="time" phx-hook="CalculateReadingTime"></span> read -
+          </p>
           <%= live_render(@socket, HidekXyzWeb.ContentUsersLive,
             sticky: true,
             id: "content_users_live",
             session: %{"id" => @article.slug}
           ) %>
+          <p>-</p>
           <%= live_render(@socket, HidekXyzWeb.ContentViewsLive,
             sticky: true,
             id: "content_views_live",
@@ -71,7 +75,7 @@ defmodule HidekXyzWeb.Content.ShowLive do
 
       <hr />
 
-      <div class="article-body"><%= raw(@article.body) %></div>
+      <div id="article" class="article-body"><%= raw(@article.body) %></div>
     </article>
     """
   end
