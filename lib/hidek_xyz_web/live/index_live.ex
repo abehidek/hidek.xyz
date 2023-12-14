@@ -14,6 +14,7 @@ defmodule HidekXyzWeb.IndexLive do
         <div class="w-full">
           <div class="mb-6">
             <p class="text-xl indent-2">安部・ギルヘルメ・ヒデK</p>
+            <p class="indent-2">IPA: /ˈʔabe ɡiˈʎɛʁ.mi hajdɛki/</p>
             <h1 class="font-black text-3xl md:text-5xl">Abe Guilherme Hidek</h1>
           </div>
           <div class="text-lg text-justify leading-relaxed flex flex-col gap-3">
