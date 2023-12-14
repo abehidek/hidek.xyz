@@ -29,13 +29,13 @@
 
 ![Project's screenshot(s)](https://raw.githubusercontent.com/abehidek/abehidek/main/assets/banner%20-%20x.png)
 
-<!-- 
+<!--
 ## About
 
 Simple overview of use/purpose.
 -->
 
-<!-- 
+<!--
 ## Key Features
 
 - Feature 1
@@ -65,7 +65,6 @@ $ git clone https://github.com/abehidek/hidek.xyz
 $ cd hidek.xyz
 
 # Setup developer environment
-
 $ mix setup
 
 # the command above will:
@@ -74,6 +73,9 @@ $ mix setup
 # - build assets
 # - run migrations
 # - seed database.
+
+# Run the Phoenix server
+$ mix phx.server
 ```
 
 ## Definitions
