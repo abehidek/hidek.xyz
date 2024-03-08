@@ -3,7 +3,7 @@ title: "This website was created using Phoenix Liveview"
 description: "Who said we should only build interactive, real-time web applications using liveview?, covering the basics on how to do it and why should you."
 publish_date: "2023-12-06"
 tags: ["phoenix", "elixir", "liveview"]
-cover: "/priv/content/media/phoenix.png"
+cover: "/priv/content/media/cover/this-website-was-created-using-phoenix-liveview.png"
 series:
   slug: "how-i-build-this-website"
   title: "How I build this website"
