@@ -23,6 +23,30 @@ defmodule HidekXyz.Content.LiveViews do
   end
 
   @impl true
+  def handle_call({:get_only, slug}, _from, %__MODULE__{} = state) do
+    case Map.get(state.content_views, slug) do
+      %ContentViews{} = content_views ->
+        {:reply, {:ok, content_views}, state}
+
+      nil ->
+        db_content_view =
+          case Repo.get_by(View, slug: slug) do
+            nil -> Repo.insert!(%View{count: 0, slug: slug})
+            %View{} = view -> view
+          end
+
+        new_content_view = %ContentViews{
+          count: db_content_view.count
+        }
+
+        new_state =
+          Map.put(state, :content_views, state.content_views |> Map.put(slug, new_content_view))
+
+        {:reply, {:ok, new_content_view}, new_state}
+    end
+  end
+
+  @impl true
   def handle_call({:get, slug}, _from, %__MODULE__{} = state) do
     case Map.get(state.content_views, slug) do
       %ContentViews{} = content_views ->
@@ -81,6 +105,7 @@ defmodule HidekXyz.Content.LiveViews do
   end
 
   def get(slug) when is_binary(slug), do: GenServer.call(__MODULE__, {:get, slug})
+  def get_only(slug) when is_binary(slug), do: GenServer.call(__MODULE__, {:get_only, slug})
 
   @impl true
   def handle_info(:sync_db, %__MODULE__{} = state) do

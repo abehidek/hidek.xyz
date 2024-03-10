@@ -36,7 +36,7 @@ defmodule HidekXyzWeb.Content.ShowLive do
           <%= live_render(@socket, HidekXyzWeb.ContentViewsLive,
             sticky: true,
             id: "content_views_live",
-            session: %{"id" => @article.slug}
+            session: %{"id" => @article.slug, "inc" => true}
           ) %>
         </div>
       </div>

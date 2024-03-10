@@ -4,13 +4,16 @@ defmodule HidekXyzWeb.ContentViewsLive do
   alias HidekXyzWeb.{Endpoint}
 
   @impl true
-  def mount(_params, %{"id" => id} = _session, socket) do
+  def mount(_params, %{"id" => id, "inc" => inc} = _session, socket) do
     topic = "content_views_" <> id
 
     socket =
       if connected?(socket) do
         {:ok, %HidekXyz.Content.LiveViews.ContentViews{} = content_views} =
-          HidekXyz.Content.LiveViews.get(id)
+          case inc do
+            true -> HidekXyz.Content.LiveViews.get(id)
+            false -> HidekXyz.Content.LiveViews.get_only(id)
+          end
 
         Endpoint.subscribe(topic)
 
