@@ -21,7 +21,6 @@ defmodule HidekXyzWeb.IndexLive do
             <p>
               A generalist working for software development, days off experimenting things with elixir, rust and self-hosting.
             </p>
-            <p>Currently working @bosch as full-stack engineer.</p>
           </div>
         </div>
         <div class="w-full">
